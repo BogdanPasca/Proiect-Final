@@ -7,7 +7,7 @@ package Logins;
 import javax.swing.JOptionPane;
 import java.awt.Toolkit;
 import java.awt.event.WindowEvent;
-import Logins.Login_s;
+//import Logins.Login_s;
 
 
 
@@ -193,7 +193,7 @@ public class Login extends javax.swing.JFrame {
             jPassword.setText(null);
             systemExit();
                  close();
-            bankapp.MainMenu Info = new bankapp.MainMenu();
+            Logins.MainMenu Info = new Logins.MainMenu();
             Info.setVisible(true);
        
         }

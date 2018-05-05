@@ -1,5 +1,5 @@
 
-package bankapp;
+package Logins;
 
 
 public enum AccountType {

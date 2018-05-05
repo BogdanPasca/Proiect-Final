@@ -1,4 +1,4 @@
-package bankapp;
+package Logins;
 
 
 public class Checking extends Account{

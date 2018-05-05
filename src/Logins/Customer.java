@@ -1,4 +1,4 @@
-package bankapp;
+package Logins;
 
 import java.io.Serializable;
 
