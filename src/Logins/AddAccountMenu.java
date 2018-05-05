@@ -39,6 +39,7 @@ public class AddAccountMenu extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         firstNameLabel = new javax.swing.JLabel();
         firstNameField = new javax.swing.JTextField();
         lastNameLabel = new javax.swing.JLabel();
@@ -53,28 +54,45 @@ public class AddAccountMenu extends javax.swing.JDialog {
         cancelButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Add Account Menu");
+        setTitle("Adaugă cont");
+        setMinimumSize(new java.awt.Dimension(350, 300));
         getContentPane().setLayout(new java.awt.GridLayout(6, 2, 5, 5));
 
+        firstNameLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         firstNameLabel.setText("Prenume:");
         getContentPane().add(firstNameLabel);
+
+        firstNameField.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         getContentPane().add(firstNameField);
 
+        lastNameLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         lastNameLabel.setText("Nume:");
         getContentPane().add(lastNameLabel);
+
+        lastNameField.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         getContentPane().add(lastNameField);
 
+        ssnLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         ssnLabel.setText("Cnp:");
         getContentPane().add(ssnLabel);
+
+        cnpField.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        cnpField.setMinimumSize(new java.awt.Dimension(50, 90));
+        cnpField.setPreferredSize(new java.awt.Dimension(31, 14));
         getContentPane().add(cnpField);
 
+        depositLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         depositLabel.setText("Depozitul inițial:");
         getContentPane().add(depositLabel);
+
+        depositField.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         getContentPane().add(depositField);
 
+        typeLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         typeLabel.setText("Tipul contului:");
         getContentPane().add(typeLabel);
 
+        typeField.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         typeField.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Depozit", "Economii" }));
         typeField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,6 +101,7 @@ public class AddAccountMenu extends javax.swing.JDialog {
         });
         getContentPane().add(typeField);
 
+        okButton.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         okButton.setText("OK");
         okButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         okButton.addActionListener(new java.awt.event.ActionListener() {
@@ -92,6 +111,7 @@ public class AddAccountMenu extends javax.swing.JDialog {
         });
         getContentPane().add(okButton);
 
+        cancelButton.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         cancelButton.setText("Cancel");
         cancelButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         cancelButton.addActionListener(new java.awt.event.ActionListener() {
@@ -217,6 +237,7 @@ public class AddAccountMenu extends javax.swing.JDialog {
     private javax.swing.JLabel depositLabel;
     private javax.swing.JTextField firstNameField;
     private javax.swing.JLabel firstNameLabel;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField lastNameField;
     private javax.swing.JLabel lastNameLabel;
     private javax.swing.JButton okButton;

@@ -107,6 +107,7 @@ public class MainMenu extends javax.swing.JFrame {
         });
 
         accountTable.setAutoCreateRowSorter(true);
+        accountTable.setBackground(new java.awt.Color(255, 255, 255));
         accountTable.setForeground(new java.awt.Color(0, 0, 0));
         accountTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -178,13 +179,19 @@ public class MainMenu extends javax.swing.JFrame {
                     .addComponent(removeAccountButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(addAccountButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 449, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 446, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         menuBar.setBackground(new java.awt.Color(0, 102, 204));
+        menuBar.setForeground(new java.awt.Color(0, 102, 204));
 
+        fileMenu.setBackground(new java.awt.Color(0, 102, 204));
+        fileMenu.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        fileMenu.setForeground(new java.awt.Color(0, 0, 0));
         fileMenu.setText("File");
+        fileMenu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        fileMenu.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
 
         exitMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Logins/delete.png"))); // NOI18N
         exitMenuItem.setText("Exit");

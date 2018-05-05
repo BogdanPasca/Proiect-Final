@@ -52,39 +52,50 @@ public class AccountDetailsPage extends javax.swing.JDialog {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new java.awt.GridLayout(9, 2, 5, 5));
 
+        firstNameLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         firstNameLabel.setText("Prenume:");
         getContentPane().add(firstNameLabel);
         getContentPane().add(firstNameField);
 
+        lastNameLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         lastNameLabel.setText("Nume:");
         getContentPane().add(lastNameLabel);
         getContentPane().add(lastNameField);
 
+        ssnLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         ssnLabel.setText("Cnp:");
         getContentPane().add(ssnLabel);
         getContentPane().add(ssnField);
 
+        typeLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         typeLabel.setText("Tipul contului:");
         getContentPane().add(typeLabel);
         getContentPane().add(typeField);
 
+        accountNumberLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         accountNumberLabel.setText("Numărul contului:");
         getContentPane().add(accountNumberLabel);
         getContentPane().add(accountNumberField);
 
+        balanceLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         balanceLabel.setText("Balance:");
         getContentPane().add(balanceLabel);
         getContentPane().add(balanceField);
 
+        interestLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         interestLabel.setText("Rata dobânzii:");
         getContentPane().add(interestLabel);
         getContentPane().add(interestField);
 
+        feeLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         feeLabel.setText("Comision tranzacție:");
         getContentPane().add(feeLabel);
         getContentPane().add(feeField);
 
+        okButton.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        okButton.setForeground(new java.awt.Color(0, 0, 0));
         okButton.setText("OK");
+        okButton.setBorder(null);
         okButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         okButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
