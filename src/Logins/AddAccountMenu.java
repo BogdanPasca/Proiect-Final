@@ -1,19 +1,8 @@
 package Logins;
-
-
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import javax.swing.JOptionPane;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-/**
- *
- * @author Carl
- */
 public class AddAccountMenu extends javax.swing.JDialog {
 
     private Bank bank;
@@ -152,7 +141,6 @@ public class AddAccountMenu extends javax.swing.JDialog {
             return;
         }
         
-      
         //Verificare nume
         if (lastNameField.getText().isEmpty()) {
             warnings.append("Câmpul nume nu poate fi gol.\n");

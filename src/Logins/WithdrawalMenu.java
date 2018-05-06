@@ -5,15 +5,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-/**
- *
- * @author Carl
- */
 public class WithdrawalMenu extends javax.swing.JDialog {
 
     private Customer customer;
@@ -45,7 +36,7 @@ public class WithdrawalMenu extends javax.swing.JDialog {
         cancelButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Deposit Menu");
+        setTitle("Meniu retragere bani");
         getContentPane().setLayout(new java.awt.GridLayout(2, 2, 5, 5));
 
         amountLabel.setText("Suma de retras:");
@@ -80,23 +71,23 @@ public class WithdrawalMenu extends javax.swing.JDialog {
     private void withdrawalButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_withdrawalButtonActionPerformed
         StringBuilder warnings = new StringBuilder();
         if (amountField.getText().isEmpty()) {
-            warnings.append("Withdrawal amount is required.\n");
+            warnings.append("Adăugați suma de retras.\n");
         } else {
             double amount = 0;
             try {
                 amount = Bank.round(Double.parseDouble(amountField.getText()), 2);
-                int result = JOptionPane.showConfirmDialog(this, "Withdraw $" + String.format("%.2f", amount) + " from the account?\nTransaction Fee: $" + String.format("%.2f", bank.getTransactionFee(customer.getAccount().getAccountType())));
+                int result = JOptionPane.showConfirmDialog(this, "Retrageți " + String.format("%.2f", amount) + " lei din cont?\nComision tranzacție: $" + String.format("%.2f", bank.getTransactionFee(customer.getAccount().getAccountType())));
                 if (result == JOptionPane.OK_OPTION) {
                     try {
                         bank.withdraw(customer.getAccount().getAccountNumber(), amount);
                         this.dispose();
                     } catch (InsufficientFundsException ex) {
-                        warnings.append("Insufficient funds to complete transaction.\n");
+                        warnings.append("Fonduri insuficiente pentru a finaliza tranzacția.\n");
                     }
                     
                 }
             } catch (NumberFormatException ex) {
-                warnings.append("Withdrawal amount must be a number.\n");
+                warnings.append("Sunt permise doar numere.\n");
             }
         }
         if (warnings.length() > 0) {

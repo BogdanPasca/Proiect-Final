@@ -5,15 +5,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-/**
- *
- * @author Carl
- */
 public class DepositMenu extends javax.swing.JDialog {
 
     private Customer customer;
@@ -45,7 +36,7 @@ public class DepositMenu extends javax.swing.JDialog {
         cancelButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Deposit Menu");
+        setTitle("Meniu adăugare bani");
         getContentPane().setLayout(new java.awt.GridLayout(2, 2, 5, 5));
 
         amountLabel.setText("Suma de adăugat:");
@@ -81,25 +72,25 @@ public class DepositMenu extends javax.swing.JDialog {
         StringBuilder warnings = new StringBuilder();
         //Verify the deposit is not empty
         if (amountField.getText().isEmpty()) {
-            warnings.append("Deposit amount is required.\n");
+            warnings.append("Introduceți suma de adăugat.\n");
         } else {
             double amount = 0;
             //Verify the deposit is a positive number
             try {
                 amount = Bank.round(Double.parseDouble(amountField.getText()), 2);
-                int result = JOptionPane.showConfirmDialog(this, "Deposit $" + String.format("%.2f", amount) + " to the account?\nInterest Earned: $" + String.format("%.2f", (bank.checkInterest(customer.getAccount().getBalance(), amount) * amount)));
+                int result = JOptionPane.showConfirmDialog(this, "Depuneti " + String.format("%.2f", amount) + " lei în cont?\nDobânda oferită: $" + String.format("%.2f", (bank.checkInterest(customer.getAccount().getBalance(), amount) * amount)));
                 if (result == JOptionPane.OK_OPTION) {
                     try {
                         //Make the deposit
                         bank.deposit(customer.getAccount().getAccountNumber(), amount);
                         this.dispose();
                     } catch (InvalidAmountException ex) {
-                        warnings.append("Deposit amount is invalid.\n");
+                        warnings.append("Suma depusă nu este validă.\n");
                     }
                     
                 }
             } catch (NumberFormatException ex) {
-                warnings.append("Deposit must be a number.\n");
+                warnings.append("Sunt permise doar numere!\n");
             }
         }
         if (warnings.length() > 0) {
