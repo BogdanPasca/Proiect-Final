@@ -52,21 +52,21 @@ public class AddAccountMenu extends javax.swing.JDialog {
         firstNameLabel.setText("Prenume:");
         getContentPane().add(firstNameLabel);
 
-        firstNameField.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        firstNameField.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         getContentPane().add(firstNameField);
 
         lastNameLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         lastNameLabel.setText("Nume:");
         getContentPane().add(lastNameLabel);
 
-        lastNameField.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        lastNameField.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         getContentPane().add(lastNameField);
 
         ssnLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         ssnLabel.setText("Cnp:");
         getContentPane().add(ssnLabel);
 
-        cnpField.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        cnpField.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         cnpField.setMinimumSize(new java.awt.Dimension(50, 90));
         cnpField.setPreferredSize(new java.awt.Dimension(31, 14));
         getContentPane().add(cnpField);
@@ -75,7 +75,7 @@ public class AddAccountMenu extends javax.swing.JDialog {
         depositLabel.setText("Depozitul inițial:");
         getContentPane().add(depositLabel);
 
-        depositField.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        depositField.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         getContentPane().add(depositField);
 
         typeLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N

@@ -49,7 +49,7 @@
     <Component class="javax.swing.JTextField" name="firstNameField">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Calibri" size="14" style="0"/>
+          <Font name="Calibri" size="18" style="0"/>
         </Property>
       </Properties>
     </Component>
@@ -64,7 +64,7 @@
     <Component class="javax.swing.JTextField" name="lastNameField">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Calibri" size="14" style="0"/>
+          <Font name="Calibri" size="18" style="0"/>
         </Property>
       </Properties>
     </Component>
@@ -79,7 +79,7 @@
     <Component class="javax.swing.JTextField" name="cnpField">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Calibri" size="14" style="0"/>
+          <Font name="Calibri" size="18" style="0"/>
         </Property>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[50, 90]"/>
@@ -100,7 +100,7 @@
     <Component class="javax.swing.JTextField" name="depositField">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Calibri" size="14" style="0"/>
+          <Font name="Calibri" size="18" style="0"/>
         </Property>
       </Properties>
     </Component>

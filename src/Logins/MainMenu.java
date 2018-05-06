@@ -107,6 +107,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         accountTable.setAutoCreateRowSorter(true);
         accountTable.setBackground(new java.awt.Color(255, 255, 255));
+        accountTable.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         accountTable.setForeground(new java.awt.Color(0, 0, 0));
         accountTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
