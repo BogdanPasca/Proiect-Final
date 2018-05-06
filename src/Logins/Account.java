@@ -2,23 +2,24 @@ package Logins;
 
 import java.io.Serializable;
 
+public abstract class Account implements Serializable {
 
-public abstract class Account  implements Serializable{
     private double balance = 0;
     private int accountNumber;
-    
-    Account(int accountNumber){
+
+    Account(int accountNumber) {
         this.accountNumber = accountNumber;
     }
-      
+
     public abstract AccountType getAccountType();
-    
+
     @Override
-    public String toString(){
-        return "Account Type: " + getAccountType().name() + " Account\n" +
-                "Account Number: " + this.getAccountNumber() + "\n" +
-                "Balance: " + this.getBalance() + "\n";
+    public String toString() {
+        return "Account Type: " + getAccountType().name() + " Account\n"
+                + "Account Number: " + this.getAccountNumber() + "\n"
+                + "Balance: " + this.getBalance() + "\n";
     }
+
     /**
      * @return the balance
      */

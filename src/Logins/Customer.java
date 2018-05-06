@@ -2,7 +2,8 @@ package Logins;
 
 import java.io.Serializable;
 
-public class Customer  implements Serializable{
+public class Customer implements Serializable {
+
     private final String prenume;
     private final String nume;
     private final String cnp;
@@ -14,21 +15,21 @@ public class Customer  implements Serializable{
         this.cnp = cnp;
         this.account = account;
     }
-    
+
     @Override
-    public String toString(){
-        return "\nCustomer Information\n" +
-                "Prenume: " + getFirstName() + "\n" + 
-                "Nume: " + getLastName() +  "\n" + 
-                "CNP: " + getCnp() +  "\n" + 
-                account;
+    public String toString() {
+        return "\nCustomer Information\n"
+                + "Prenume: " + getFirstName() + "\n"
+                + "Nume: " + getLastName() + "\n"
+                + "CNP: " + getCnp() + "\n"
+                + account;
     }
-    
-    public String basicInfo(){
+
+    public String basicInfo() {
         return " Account Number: " + account.getAccountNumber() + " - Nume: " + getFirstName() + " " + getLastName();
     }
-    
-    Account getAccount(){
+
+    Account getAccount() {
         return account;
     }
 
@@ -52,5 +53,5 @@ public class Customer  implements Serializable{
     public String getCnp() {
         return cnp;
     }
-    
+
 }

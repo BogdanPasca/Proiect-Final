@@ -1,6 +1,5 @@
 package Logins;
 
-
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -84,7 +83,7 @@ public class WithdrawalMenu extends javax.swing.JDialog {
                     } catch (InsufficientFundsException ex) {
                         warnings.append("Fonduri insuficiente pentru a finaliza tranzacția.\n");
                     }
-                    
+
                 }
             } catch (NumberFormatException ex) {
                 warnings.append("Sunt permise doar numere.\n");

@@ -1,4 +1,5 @@
 package Logins;
+
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import javax.swing.JOptionPane;
@@ -128,54 +129,47 @@ public class AddAccountMenu extends javax.swing.JDialog {
             firstName = firstNameField.getText();
         }
         //Daca prenumele este un numar - eroare
-        if (firstNameField.getText().matches("-?\\d+(\\.\\d+)?"))
-        {
-            JOptionPane.showMessageDialog(this, "Nu sunt admise numere în câmpul prenume!","Input Error", JOptionPane.WARNING_MESSAGE);
+        if (firstNameField.getText().matches("-?\\d+(\\.\\d+)?")) {
+            JOptionPane.showMessageDialog(this, "Nu sunt admise numere în câmpul prenume!", "Input Error", JOptionPane.WARNING_MESSAGE);
             return;
         }
-        
-         //Verificare pentru litere in campul prenume
-        if(!firstNameField.getText().matches("^[a-zA-z0-9]*$"))
-        {
-            JOptionPane.showMessageDialog(this,"Sunt admise doar litere în câmpul prenume!","Input Error", JOptionPane.WARNING_MESSAGE);
+
+        //Verificare pentru litere in campul prenume
+        if (!firstNameField.getText().matches("^[a-zA-z0-9]*$")) {
+            JOptionPane.showMessageDialog(this, "Sunt admise doar litere în câmpul prenume!", "Input Error", JOptionPane.WARNING_MESSAGE);
             return;
         }
-        
+
         //Verificare nume
         if (lastNameField.getText().isEmpty()) {
             warnings.append("Câmpul nume nu poate fi gol.\n");
         } else {
             lastName = lastNameField.getText();
         }
-        
+
         //Daca numele este un numar - eroare
-        if(lastNameField.getText().matches("-?\\d+(\\.\\d+)?"))
-        {
-            JOptionPane.showMessageDialog(this, "Nu sunt admise numere în câmpul nume!","Input Error", JOptionPane.WARNING_MESSAGE);
+        if (lastNameField.getText().matches("-?\\d+(\\.\\d+)?")) {
+            JOptionPane.showMessageDialog(this, "Nu sunt admise numere în câmpul nume!", "Input Error", JOptionPane.WARNING_MESSAGE);
             return;
         }
-        
+
         //Verificare pentru litere in campul nume
-        if(!lastNameField.getText().matches("^[a-zA-z0-9]*$"))
-        {
-            JOptionPane.showMessageDialog(this,"Sunt admise doar litere în câmpul nume!","Input Error", JOptionPane.WARNING_MESSAGE);
+        if (!lastNameField.getText().matches("^[a-zA-z0-9]*$")) {
+            JOptionPane.showMessageDialog(this, "Sunt admise doar litere în câmpul nume!", "Input Error", JOptionPane.WARNING_MESSAGE);
             return;
         }
-        
-        
+
         //Verificare CNP
-        if(cnpField.getText().isEmpty())
-        {
+        if (cnpField.getText().isEmpty()) {
             warnings.append("Câmpul cnp nu poate fi gol.\n");
         }
         //if cnp it is not a number
-        if(!cnpField.getText().matches("-?\\d+(\\.\\d+)?"))
-        {
+        if (!cnpField.getText().matches("-?\\d+(\\.\\d+)?")) {
             warnings.append("Sunt admise doar numere în câmpul cnp.\n ");
         } else {
             cnp = cnpField.getText();
         }
-        
+
         //Verificare depozit initial
         if (depositField.getText().isEmpty()) {
             warnings.append("Câmpul depozitul inițial nu poate fi gol.");
@@ -216,7 +210,6 @@ public class AddAccountMenu extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_typeFieldActionPerformed
 
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cancelButton;

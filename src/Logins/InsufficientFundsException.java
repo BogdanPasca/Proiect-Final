@@ -6,5 +6,3 @@ class InsufficientFundsException extends Exception {
         super("Nu aveți suficiente fonduri pentru a putea finaliza tranzacția.");
     }
 }
-
-

@@ -9,9 +9,9 @@ public class AccountDetailsPage extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         setLocationRelativeTo(parent);
-        
+
         setTitle(String.format("Account Details Page - %s %s", customer.getFirstName(), customer.getLastName()));
-        
+
         firstNameField.setText(customer.getFirstName());
         lastNameField.setText(customer.getLastName());
         ssnField.setText(customer.getCnp());

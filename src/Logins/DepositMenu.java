@@ -1,6 +1,5 @@
 package Logins;
 
-
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -87,7 +86,7 @@ public class DepositMenu extends javax.swing.JDialog {
                     } catch (InvalidAmountException ex) {
                         warnings.append("Suma depusă nu este validă.\n");
                     }
-                    
+
                 }
             } catch (NumberFormatException ex) {
                 warnings.append("Sunt permise doar numere!\n");

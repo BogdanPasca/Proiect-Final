@@ -1,6 +1,4 @@
-
 package Logins;
-
 
 public enum AccountType {
     Depozit,

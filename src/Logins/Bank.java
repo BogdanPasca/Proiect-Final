@@ -14,7 +14,7 @@ public class Bank implements Serializable {
         Customer customer = database.GetAccount(accountId);
         return customer;
     }
-    
+
     boolean closeAccount(int accountId) {
         return database.DeleteAccount(accountId);
     }
@@ -68,7 +68,7 @@ public class Bank implements Serializable {
 
     double getTransactionFee(AccountType accountType) {
         double transactionFee = 0;
-        switch(accountType){
+        switch (accountType) {
             case Depozit:
                 transactionFee = 5;
                 break;

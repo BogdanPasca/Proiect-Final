@@ -13,7 +13,6 @@ import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-
 public class MainMenu extends javax.swing.JFrame {
 
     private Bank bank;
@@ -252,7 +251,7 @@ public class MainMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_depositButtonActionPerformed
 
     private void removeAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeAccountButtonActionPerformed
-        int result = JOptionPane.showConfirmDialog(this, "Sunteți siguri?", "Select an Option" , JOptionPane.YES_NO_OPTION);
+        int result = JOptionPane.showConfirmDialog(this, "Sunteți siguri?", "Select an Option", JOptionPane.YES_NO_OPTION);
         if (result == JOptionPane.OK_OPTION) {
             int selectedRow = accountTable.getSelectedRow();
             if (selectedRow >= 0) {
@@ -272,7 +271,7 @@ public class MainMenu extends javax.swing.JFrame {
             addCustomerToTable(menu.getCustomer());
         }
     }//GEN-LAST:event_addAccountButtonActionPerformed
-    
+
     private void depositOrWithdraw(String action) {
         int selectedRow = accountTable.getSelectedRow();
         Customer customer = getSelectedCustomer(selectedRow);
@@ -280,8 +279,7 @@ public class MainMenu extends javax.swing.JFrame {
             javax.swing.JDialog window = null;
             if (action.equals("deposit")) {
                 window = new DepositMenu(this, true, bank, customer);
-            }
-            else if (action.equals("withdraw")) {
+            } else if (action.equals("withdraw")) {
                 window = new WithdrawalMenu(this, true, bank, customer);
             }
             if (window != null) {
@@ -322,7 +320,7 @@ public class MainMenu extends javax.swing.JFrame {
         // Deletes the rows from the highest index downwards, since deleting 
         // from index 0 would shift all remaining rows to a lower index
         for (int i = model.getRowCount() - 1; i >= 0; i--) {
-            model.removeRow(i); 
+            model.removeRow(i);
         }
         for (Customer c : bank.getCustomers()) {
             addCustomerToTable(c);

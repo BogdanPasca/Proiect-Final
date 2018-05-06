@@ -4,12 +4,11 @@
  * and open the template in the editor.
  */
 package Logins;
+
 import javax.swing.JOptionPane;
 import java.awt.Toolkit;
 import java.awt.event.WindowEvent;
 //import Logins.Login_s;
-
-
 
 /**
  *
@@ -187,18 +186,15 @@ public class Login extends javax.swing.JFrame {
     private void jBtnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnLoginActionPerformed
         String password = jPassword.getText();
         String username = jTxtUtilizator.getText();
-        if ( password.contains("changeit") && (username.contains("bogdan")))
-        {
+        if (password.contains("changeit") && (username.contains("bogdan"))) {
             jTxtUtilizator.setText(null);
             jPassword.setText(null);
             systemExit();
-                 close();
+            close();
             Logins.MainMenu Info = new Logins.MainMenu();
             Info.setVisible(true);
-       
-        }
-        else
-        {
+
+        } else {
             JOptionPane.showMessageDialog(null, "Datele de autentificare sunt gresite!", "Login Error", JOptionPane.ERROR_MESSAGE);
             jPassword.setText(null);
             jTxtUtilizator.setText(null);
@@ -254,17 +250,14 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField jTxtUtilizator;
     // End of variables declaration//GEN-END:variables
 
-    
-    private void systemExit()
-    {
-     WindowEvent winCloseing = new WindowEvent(this,WindowEvent.WINDOW_CLOSING );
+    private void systemExit() {
+        WindowEvent winCloseing = new WindowEvent(this, WindowEvent.WINDOW_CLOSING);
     }
-    
+
     //inchide fereastra de login
-    public void close()
-    {
+    public void close() {
         WindowEvent winClosingEvent = new WindowEvent(this, WindowEvent.WINDOW_CLOSING);
         Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(winClosingEvent);
     }
-    
+
 }
