@@ -1,0 +1,2 @@
+- aplicatie desktop (gui) pentru simularea operatiilor realizate intr-o banca.
+- java + MYSQL (PostgreSQL)
