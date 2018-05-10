@@ -210,7 +210,6 @@ public class Login extends javax.swing.JFrame {
         if (password.equalsIgnoreCase("changeit") && (username.equalsIgnoreCase("bogdan"))) {
             jTxtUtilizator.setText(null);
             jPassword.setText(null);
-           // systemExit();
            //O metoda care inchide fereastra de login dupa ce datele au fost introduse corect.
             close();
             //deschide layout-ul cu interfata programului bancar
@@ -275,9 +274,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField jTxtUtilizator;
     // End of variables declaration//GEN-END:variables
 
-//    private void systemExit() {
-//        WindowEvent winCloseing = new WindowEvent(this, WindowEvent.WINDOW_CLOSING);
-//    }
 
     //inchide fereastra de login dupa ce datele au fost introduse corect
     public void close() {
