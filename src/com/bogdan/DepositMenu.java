@@ -1,10 +1,10 @@
-package Logins;
+package com.bogdan;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
-public class WithdrawalMenu extends javax.swing.JDialog {
+public class DepositMenu extends javax.swing.JDialog {
 
     private Customer customer;
     private Bank bank;
@@ -12,7 +12,7 @@ public class WithdrawalMenu extends javax.swing.JDialog {
     /**
      * Creates new form DepositMenu
      */
-    public WithdrawalMenu(java.awt.Frame parent, boolean modal, Bank bank, Customer customer) {
+    public DepositMenu(java.awt.Frame parent, boolean modal, Bank bank, Customer customer) {
         super(parent, modal);
         initComponents();
         setLocationRelativeTo(parent);
@@ -31,27 +31,27 @@ public class WithdrawalMenu extends javax.swing.JDialog {
 
         amountLabel = new javax.swing.JLabel();
         amountField = new javax.swing.JTextField();
-        withdrawalButton = new javax.swing.JButton();
+        depositButton = new javax.swing.JButton();
         cancelButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Meniu retragere bani");
+        setTitle("Meniu adăugare bani");
         getContentPane().setLayout(new java.awt.GridLayout(2, 2, 5, 5));
 
-        amountLabel.setText("Suma de retras:");
+        amountLabel.setText("Suma de adăugat:");
         getContentPane().add(amountLabel);
         getContentPane().add(amountField);
 
-        withdrawalButton.setText("Retrage");
-        withdrawalButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        withdrawalButton.addActionListener(new java.awt.event.ActionListener() {
+        depositButton.setText("Adaugă");
+        depositButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        depositButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                withdrawalButtonActionPerformed(evt);
+                depositButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(withdrawalButton);
+        getContentPane().add(depositButton);
 
-        cancelButton.setText("Anulează");
+        cancelButton.setText("Anulare");
         cancelButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         cancelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -67,38 +67,41 @@ public class WithdrawalMenu extends javax.swing.JDialog {
         this.dispose();
     }//GEN-LAST:event_cancelButtonActionPerformed
 
-    private void withdrawalButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_withdrawalButtonActionPerformed
+    private void depositButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_depositButtonActionPerformed
         StringBuilder warnings = new StringBuilder();
+        //Verify the deposit is not empty
         if (amountField.getText().isEmpty()) {
-            warnings.append("Adăugați suma de retras.\n");
+            warnings.append("Introduceți suma de adăugat.\n");
         } else {
             double amount = 0;
+            //Verify the deposit is a positive number
             try {
                 amount = Bank.round(Double.parseDouble(amountField.getText()), 2);
-                int result = JOptionPane.showConfirmDialog(this, "Retrageți " + String.format("%.2f", amount) + " lei din cont?\nComision tranzacție: Lei " + String.format("%.2f", bank.getTransactionFee(customer.getAccount().getAccountType())));
+                int result = JOptionPane.showConfirmDialog(this, "Depuneti " + String.format("%.2f", amount) + " lei în cont?\nDobânda oferită: " + String.format("%.2f Lei", (bank.checkInterest(customer.getAccount().getBalance(), amount) * amount)));
                 if (result == JOptionPane.OK_OPTION) {
                     try {
-                        bank.withdraw(customer.getAccount().getAccountNumber(), amount);
+                        //Make the deposit
+                        bank.deposit(customer.getAccount().getAccountNumber(), amount);
                         this.dispose();
-                    } catch (InsufficientFundsException ex) {
-                        warnings.append("Fonduri insuficiente pentru a finaliza tranzacția.\n");
+                    } catch (InvalidAmountException ex) {
+                        warnings.append("Suma depusă nu este validă.\n");
                     }
 
                 }
             } catch (NumberFormatException ex) {
-                warnings.append("Sunt permise doar numere.\n");
+                warnings.append("Sunt permise doar numere!\n");
             }
         }
         if (warnings.length() > 0) {
-            JOptionPane.showMessageDialog(this, warnings.toString(), "Withdrawal Warnings", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(this, warnings.toString(), "Deposit Warnings", JOptionPane.WARNING_MESSAGE);
         }
-    }//GEN-LAST:event_withdrawalButtonActionPerformed
+    }//GEN-LAST:event_depositButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField amountField;
     private javax.swing.JLabel amountLabel;
     private javax.swing.JButton cancelButton;
-    private javax.swing.JButton withdrawalButton;
+    private javax.swing.JButton depositButton;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,4 +1,4 @@
-package Logins;
+package com.bogdan;
 
 public class Savings extends Account {
 

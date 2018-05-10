@@ -1,4 +1,4 @@
-package Logins;
+package com.bogdan;
 
 public class AccountDetailsPage extends javax.swing.JDialog {
 

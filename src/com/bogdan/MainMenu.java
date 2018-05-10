@@ -1,4 +1,4 @@
-package Logins;
+package com.bogdan;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -193,7 +193,7 @@ public class MainMenu extends javax.swing.JFrame {
         fileMenu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         fileMenu.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
 
-        exitMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Logins/delete.png"))); // NOI18N
+        exitMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/bogdan/delete.png"))); // NOI18N
         exitMenuItem.setText("Exit");
         exitMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

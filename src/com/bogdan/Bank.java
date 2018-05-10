@@ -1,4 +1,4 @@
-package Logins;
+package com.bogdan;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -10,21 +10,21 @@ public class Bank implements Serializable {
     private DbService database = new DbService();
 
     Customer openAccount(String firstName, String lastName, String cnp, AccountType type, Double balance) {
-        int accountId = database.AddAccount(firstName, lastName, cnp, type, balance);
-        Customer customer = database.GetAccount(accountId);
+        int accountId = database.addAccount(firstName, lastName, cnp, type, balance);
+        Customer customer = database.getAccount(accountId);
         return customer;
     }
 
     boolean closeAccount(int accountId) {
-        return database.DeleteAccount(accountId);
+        return database.deleteAccount(accountId);
     }
 
     Customer getCustomer(int accountId) {
-        return database.GetAccount(accountId);
+        return database.getAccount(accountId);
     }
 
     ArrayList<Customer> getCustomers() {
-        return database.GetAllAccounts();
+        return database.getAllAccounts();
     }
 
     void withdraw(int accountId, double amount) throws InsufficientFundsException {
@@ -34,7 +34,7 @@ public class Bank implements Serializable {
             throw new InsufficientFundsException();
         }
         double newBalance = customer.getAccount().getBalance() - (amount + transactionFee);
-        database.UpdateAccount(accountId, newBalance);
+        database.updateAccount(accountId, newBalance);
     }
 
     void deposit(int accountId, double amount) throws InvalidAmountException {
@@ -44,7 +44,7 @@ public class Bank implements Serializable {
         }
         double interest = checkInterest(customer.getAccount().getBalance(), amount);
         double amountToDeposit = amount + (amount * interest);
-        database.UpdateAccount(accountId, customer.getAccount().getBalance() + amountToDeposit);
+        database.updateAccount(accountId, customer.getAccount().getBalance() + amountToDeposit);
     }
 
     public double checkInterest(double balance, double amount) {

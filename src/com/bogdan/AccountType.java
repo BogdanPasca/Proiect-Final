@@ -1,4 +1,4 @@
-package Logins;
+package com.bogdan;
 
 public enum AccountType {
     Depozit,

@@ -1,4 +1,4 @@
-package Logins;
+package com.bogdan;
 
 import java.io.Serializable;
 

@@ -1,4 +1,4 @@
-package Logins;
+package com.bogdan;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

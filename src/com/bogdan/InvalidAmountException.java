@@ -1,4 +1,4 @@
-package Logins;
+package com.bogdan;
 
 class InvalidAmountException extends Exception {
 

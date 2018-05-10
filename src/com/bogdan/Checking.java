@@ -1,4 +1,4 @@
-package Logins;
+package com.bogdan;
 
 public class Checking extends Account {
 

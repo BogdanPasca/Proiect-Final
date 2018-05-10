@@ -3,17 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Logins;
+package com.bogdan;
 
 import javax.swing.JOptionPane;
 import java.awt.Toolkit;
+import java.awt.event.KeyEvent;
 import java.awt.event.WindowEvent;
-//import Logins.Login_s;
 
-/**
- *
- * @author Dumnezeu
- */
 public class Login extends javax.swing.JFrame {
 
     /**
@@ -55,7 +51,7 @@ public class Login extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(0, 102, 204));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Logins/login2.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/bogdan/login2.png"))); // NOI18N
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -125,6 +121,11 @@ public class Login extends javax.swing.JFrame {
                 jPasswordActionPerformed(evt);
             }
         });
+        jPassword.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jPasswordKeyPressed(evt);
+            }
+        });
         jPanel1.add(jPassword);
         jPassword.setBounds(360, 290, 260, 40);
 
@@ -186,13 +187,14 @@ public class Login extends javax.swing.JFrame {
     private void jBtnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnLoginActionPerformed
         String password = jPassword.getText();
         String username = jTxtUtilizator.getText();
-        if (password.contains("changeit") && (username.contains("bogdan"))) {
+        if (password.equalsIgnoreCase("changeit") && (username.equalsIgnoreCase("bogdan"))) {
             jTxtUtilizator.setText(null);
             jPassword.setText(null);
-            systemExit();
+            //systemExit();
             close();
-            Logins.MainMenu Info = new Logins.MainMenu();
-            Info.setVisible(true);
+            
+            com.bogdan.MainMenu programBanca = new com.bogdan.MainMenu();
+            programBanca.setVisible(true);
 
         } else {
             JOptionPane.showMessageDialog(null, "Datele de autentificare sunt gresite!", "Login Error", JOptionPane.ERROR_MESSAGE);
@@ -200,6 +202,29 @@ public class Login extends javax.swing.JFrame {
             jTxtUtilizator.setText(null);
         }
     }//GEN-LAST:event_jBtnLoginActionPerformed
+
+    private void jPasswordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+             String password = jPassword.getText();
+        String username = jTxtUtilizator.getText();
+        if (password.equalsIgnoreCase("changeit") && (username.equalsIgnoreCase("bogdan"))) {
+            jTxtUtilizator.setText(null);
+            jPassword.setText(null);
+           // systemExit();
+           //O metoda care inchide fereastra de login dupa ce datele au fost introduse corect.
+            close();
+            //deschide layout-ul cu interfata programului bancar
+            com.bogdan.MainMenu programBanca = new com.bogdan.MainMenu();
+            programBanca.setVisible(true);
+
+        } else {
+            JOptionPane.showMessageDialog(null, "Datele de autentificare sunt gresite!", "Login Error", JOptionPane.ERROR_MESSAGE);
+            jPassword.setText(null);
+            jTxtUtilizator.setText(null);
+        }
+            
+        }
+    }//GEN-LAST:event_jPasswordKeyPressed
 
     /**
      * @param args the command line arguments
@@ -250,11 +275,11 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField jTxtUtilizator;
     // End of variables declaration//GEN-END:variables
 
-    private void systemExit() {
-        WindowEvent winCloseing = new WindowEvent(this, WindowEvent.WINDOW_CLOSING);
-    }
+//    private void systemExit() {
+//        WindowEvent winCloseing = new WindowEvent(this, WindowEvent.WINDOW_CLOSING);
+//    }
 
-    //inchide fereastra de login
+    //inchide fereastra de login dupa ce datele au fost introduse corect
     public void close() {
         WindowEvent winClosingEvent = new WindowEvent(this, WindowEvent.WINDOW_CLOSING);
         Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(winClosingEvent);

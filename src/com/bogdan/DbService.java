@@ -1,4 +1,4 @@
-package Logins;
+package com.bogdan;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -25,7 +25,7 @@ public class DbService {
     }
 
     //Create (Add Account)
-    int AddAccount(String firstName, String lastName, String cnp, AccountType accountType, Double balance) {
+    int addAccount(String firstName, String lastName, String cnp, AccountType accountType, Double balance) {
         int userId = -1;
         int accountId = -1;
         Connection connection = connect();
@@ -72,7 +72,7 @@ public class DbService {
     }
 
     //Read (Get Details)
-    Customer GetAccount(int accountId) {
+    Customer getAccount(int accountId) {
         Customer customer = null;
         Connection connection = connect();
         try {
@@ -105,7 +105,7 @@ public class DbService {
     }
 
     //Update (Edit Account)
-    boolean UpdateAccount(int accountId, Double newBalance) {
+    boolean updateAccount(int accountId, Double newBalance) {
         boolean success = false;
         Connection connection = connect();
         try {
@@ -123,7 +123,7 @@ public class DbService {
     }
 
     //Delete (Remove Account)
-    boolean DeleteAccount(int accountId) {
+    boolean deleteAccount(int accountId) {
         boolean success = false;
         Connection connection = connect();
         try {
@@ -142,7 +142,7 @@ public class DbService {
         return success;
     }
 
-    ArrayList<Customer> GetAllAccounts() {
+    ArrayList<Customer> getAllAccounts() {
         ArrayList<Customer> customers = new ArrayList<Customer>();
         Connection connection = connect();
         try {
@@ -174,6 +174,27 @@ public class DbService {
         return customers;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //codul pentru conectarea cu PostgreSQL
 /*
@@ -209,7 +230,7 @@ public class DbService {
 //    }
 //
 //    //Create (Add Account)
-//    int AddAccount(String firstName, String lastName, String cnp, AccountType accountType, Double balance) {
+//    int addAccount(String firstName, String lastName, String cnp, AccountType accountType, Double balance) {
 //        int userId = -1;
 //        int accountId = -1;
 //        Connection connection = connect();
@@ -255,7 +276,7 @@ public class DbService {
 //        return accountId;
 //    }
 //    //Read (Get Details)
-//    Customer GetAccount(int accountId) {
+//    Customer getAccount(int accountId) {
 //        Customer customer = null;
 //        Connection connection = connect();
 //        try {
@@ -287,7 +308,7 @@ public class DbService {
 //        return customer;
 //    }
 //    //Update (Edit Account)
-//    boolean UpdateAccount(int accountId, Double newBalance){
+//    boolean updateAccount(int accountId, Double newBalance){
 //        boolean success = false;
 //        Connection connection = connect();
 //        try {
@@ -304,7 +325,7 @@ public class DbService {
 //        return success;
 //    }
 //    //Delete (Remove Account)
-//    boolean DeleteAccount(int accountId) { 
+//    boolean deleteAccount(int accountId) { 
 //        boolean success = false;
 //        Connection connection = connect();
 //        try {
@@ -323,7 +344,7 @@ public class DbService {
 //        return success;
 //    }
 //
-//    ArrayList<Customer> GetAllAccounts() {
+//    ArrayList<Customer> getAllAccounts() {
 //        ArrayList<Customer> customers = new ArrayList<Customer>();
 //        Connection connection = connect();
 //        try {
