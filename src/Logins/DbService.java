@@ -10,9 +10,9 @@ import java.util.ArrayList;
 
 public class DbService {
 
-    String url = "jdbc:mysql://localhost:3306/bankdb";
-    String user = "bank";
-    String password = "securepassword";
+    String url = "jdbc:mysql://localhost:3306/bancadb";
+    String user = "banca";
+    String password = "changeit";
 
     private Connection connect() {
         Connection connection;
