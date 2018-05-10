@@ -75,7 +75,7 @@ public class WithdrawalMenu extends javax.swing.JDialog {
             double amount = 0;
             try {
                 amount = Bank.round(Double.parseDouble(amountField.getText()), 2);
-                int result = JOptionPane.showConfirmDialog(this, "Retrageți " + String.format("%.2f", amount) + " lei din cont?\nComision tranzacție: $" + String.format("%.2f", bank.getTransactionFee(customer.getAccount().getAccountType())));
+                int result = JOptionPane.showConfirmDialog(this, "Retrageți " + String.format("%.2f", amount) + " lei din cont?\nComision tranzacție: Lei " + String.format("%.2f", bank.getTransactionFee(customer.getAccount().getAccountType())));
                 if (result == JOptionPane.OK_OPTION) {
                     try {
                         bank.withdraw(customer.getAccount().getAccountNumber(), amount);

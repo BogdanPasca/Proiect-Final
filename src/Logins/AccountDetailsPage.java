@@ -17,9 +17,9 @@ public class AccountDetailsPage extends javax.swing.JDialog {
         ssnField.setText(customer.getCnp());
         typeField.setText(customer.getAccount().getAccountType().name());
         accountNumberField.setText(String.valueOf(customer.getAccount().getAccountNumber()));
-        balanceField.setText(String.format("$%.2f", customer.getAccount().getBalance()));
+        balanceField.setText(String.format("Lei %.2f", customer.getAccount().getBalance()));
         interestField.setText(String.valueOf(bank.checkInterest(customer.getAccount().getBalance(), 0) * 100) + "%");
-        feeField.setText(String.format("$%.2f", bank.getTransactionFee(customer.getAccount().getAccountType())));
+        feeField.setText(String.format("Lei %.2f", bank.getTransactionFee(customer.getAccount().getAccountType())));
     }
 
     /**
@@ -78,7 +78,7 @@ public class AccountDetailsPage extends javax.swing.JDialog {
         getContentPane().add(accountNumberField);
 
         balanceLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        balanceLabel.setText("Balance:");
+        balanceLabel.setText("Bani în cont:");
         getContentPane().add(balanceLabel);
         getContentPane().add(balanceField);
 

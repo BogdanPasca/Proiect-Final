@@ -77,7 +77,7 @@ public class DepositMenu extends javax.swing.JDialog {
             //Verify the deposit is a positive number
             try {
                 amount = Bank.round(Double.parseDouble(amountField.getText()), 2);
-                int result = JOptionPane.showConfirmDialog(this, "Depuneti " + String.format("%.2f", amount) + " lei în cont?\nDobânda oferită: $" + String.format("%.2f", (bank.checkInterest(customer.getAccount().getBalance(), amount) * amount)));
+                int result = JOptionPane.showConfirmDialog(this, "Depuneti " + String.format("%.2f", amount) + " lei în cont?\nDobânda oferită: " + String.format("%.2f Lei", (bank.checkInterest(customer.getAccount().getBalance(), amount) * amount)));
                 if (result == JOptionPane.OK_OPTION) {
                     try {
                         //Make the deposit

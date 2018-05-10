@@ -73,7 +73,7 @@ public class Bank implements Serializable {
                 transactionFee = 5;
                 break;
             case Economii:
-                transactionFee = 5;
+                transactionFee = 3;
                 break;
             case Undefined:
             default:
