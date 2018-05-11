@@ -251,7 +251,7 @@ public class MainMenu extends javax.swing.JFrame {
             if (selectedRow >= 0) {
                 Client customer = getSelectedCustomer(selectedRow);
                 if (customer != null) {
-                    bank.closeAccount(customer.getCont().getNumarCont());
+                    bank.stergeCont(customer.getCont().getNumarCont());
                     removeCustomerFromTable(selectedRow);
                 }
             }
@@ -314,7 +314,7 @@ public class MainMenu extends javax.swing.JFrame {
         for (int i = model.getRowCount() - 1; i >= 0; i--) {
             model.removeRow(i);
         }
-        for (Client c : bank.getCustomers()) {
+        for (Client c : bank.getClienti()) {
             addCustomerToTable(c);
         }
     }

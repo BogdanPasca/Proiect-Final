@@ -75,7 +75,7 @@ public class DepositMenu extends javax.swing.JDialog {
                 if (result == JOptionPane.OK_OPTION) {
                     try {
                         //Realizeaza tranzactia
-                        bank.deposit(customer.getCont().getNumarCont(), amount);
+                        bank.adaugaBani(customer.getCont().getNumarCont(), amount);
                         this.dispose();
                     } catch (InvalidAmountException ex) {
                         warnings.append("Suma depusă nu este validă.\n");

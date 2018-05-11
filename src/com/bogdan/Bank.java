@@ -15,7 +15,7 @@ public class Bank{
         return client;
     }
 
-    boolean closeAccount(int accountId) {
+    boolean stergeCont(int accountId) {
         return database.deleteAccount(accountId);
     }
 
@@ -23,7 +23,7 @@ public class Bank{
         return database.getAccount(accountId);
     }
 
-    ArrayList<Client> getCustomers() {
+    ArrayList<Client> getClienti() {
         return database.getAllAccounts();
     }
 
@@ -37,7 +37,7 @@ public class Bank{
         database.updateAccount(accountId, noulSold);
     }
 
-    void deposit(int accountId, double suma) throws InvalidAmountException {
+    void adaugaBani(int accountId, double suma) throws InvalidAmountException {
         Client client = getClient(accountId);
         if (suma <= 0) {
             throw new InvalidAmountException();
