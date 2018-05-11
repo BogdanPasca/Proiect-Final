@@ -7,10 +7,10 @@
 - legatura la baza de date se face prin MYSQL (aici am folosit MySQL Workbench);
 - este nevoie ca MySQL Server sa fie pornit.
 
-- pentru a rula programul trebuie
-- Pornit MySQL server; 
-- Realizata baza de date cu comenzile din fisierul sql;
-- Descarcat folderul Bankapp_JAR.rar, dezarhivat si rulat BankProject.jar !!
+- pentru a rula programul trebuie:
+-- Pornit MySQL server; 
+-- Realizata baza de date cu comenzile din fisierul sql;
+-- Descarcat folderul Bankapp_JAR.rar, dezarhivat si rulat BankProject.jar !!
 
 
   
