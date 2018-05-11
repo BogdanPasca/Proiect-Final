@@ -1,11 +1,11 @@
 package com.bogdan;
 
-import java.io.Serializable;
+
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.ArrayList;
 
-public class Bank implements Serializable {
+public class Bank{
 
     private DbService database = new DbService();
 

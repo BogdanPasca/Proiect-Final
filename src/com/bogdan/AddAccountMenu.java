@@ -1,7 +1,4 @@
 package com.bogdan;
-
-import java.math.BigDecimal;
-import java.math.RoundingMode;
 import javax.swing.JOptionPane;
 
 public class AddAccountMenu extends javax.swing.JDialog {

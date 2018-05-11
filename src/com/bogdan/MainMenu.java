@@ -1,15 +1,5 @@
 package com.bogdan;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -179,7 +169,7 @@ public class MainMenu extends javax.swing.JFrame {
                     .addComponent(removeAccountButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(addAccountButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 446, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 445, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -192,9 +182,12 @@ public class MainMenu extends javax.swing.JFrame {
         fileMenu.setText("File");
         fileMenu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         fileMenu.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        fileMenu.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/com/bogdan/save-icon-5422.png"))); // NOI18N
 
         exitMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/bogdan/delete.png"))); // NOI18N
-        exitMenuItem.setText("Exit");
+        exitMenuItem.setText("Ieșire");
+        exitMenuItem.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        exitMenuItem.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         exitMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 exitMenuItemActionPerformed(evt);
@@ -318,8 +311,6 @@ public class MainMenu extends javax.swing.JFrame {
 
     private void reloadTable() {
         DefaultTableModel model = (DefaultTableModel) accountTable.getModel();
-        // Deletes the rows from the highest index downwards, since deleting 
-        // from index 0 would shift all remaining rows to a lower index
         for (int i = model.getRowCount() - 1; i >= 0; i--) {
             model.removeRow(i);
         }

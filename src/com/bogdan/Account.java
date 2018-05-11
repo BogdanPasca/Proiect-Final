@@ -1,8 +1,6 @@
 package com.bogdan;
 
-import java.io.Serializable;
-
-public abstract class Account implements Serializable {
+public abstract class Account {
 
     private double balance = 0;
     private int accountNumber;

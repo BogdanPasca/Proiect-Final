@@ -1,8 +1,7 @@
 package com.bogdan;
 
-import java.io.Serializable;
 
-public class Customer implements Serializable {
+public class Customer {
 
     private final String prenume;
     private final String nume;

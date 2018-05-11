@@ -1,7 +1,4 @@
 package com.bogdan;
-
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 public class DepositMenu extends javax.swing.JDialog {
