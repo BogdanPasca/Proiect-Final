@@ -8,7 +8,10 @@
 - este nevoie ca MySQL Server sa fie pornit.
 
 - pentru a rula programul trebuie
-  1 Pornit MySQL server; 
-  2 Realizata baza de date cu comenzile din fisierul sql
-  3 Descarcat folderul Bankapp_JAR.rar, dezarhivat si rulat BankProject.jar !!
+- Pornit MySQL server; 
+- Realizata baza de date cu comenzile din fisierul sql;
+- Descarcat folderul Bankapp_JAR.rar, dezarhivat si rulat BankProject.jar !!
+
+
+  
    
