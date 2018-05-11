@@ -9,9 +9,6 @@ public class MainMenu extends javax.swing.JFrame {
     private String saveLocation = null;
     private final DefaultTableModel model;
 
-    /**
-     * Creates new form MainMenu
-     */
     public MainMenu() {
         initComponents();
         setLocationRelativeTo(null);
