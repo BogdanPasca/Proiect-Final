@@ -29,14 +29,14 @@
     <Property name="verticalGap" type="int" value="5"/>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="amountLabel">
+    <Component class="javax.swing.JLabel" name="sumaDeAdaugatLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Suma de ad&#x103;ugat:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="amountField">
+    <Component class="javax.swing.JTextField" name="sumaDeAdaugatField">
     </Component>
-    <Component class="javax.swing.JButton" name="depositButton">
+    <Component class="javax.swing.JButton" name="adaugaButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Adaug&#x103;"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
@@ -44,10 +44,10 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="depositButtonActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="adaugaButtonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="cancelButton">
+    <Component class="javax.swing.JButton" name="anulareButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Anulare"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
@@ -55,7 +55,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cancelButtonActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="anulareButtonActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

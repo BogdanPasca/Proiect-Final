@@ -5,21 +5,21 @@ public class AccountDetailsPage extends javax.swing.JDialog {
     /**
      * Creates new form AccountDetailsPage
      */
-    public AccountDetailsPage(java.awt.Frame parent, boolean modal, Bank bank, Customer customer) {
+    public AccountDetailsPage(java.awt.Frame parent, boolean modal, Bank bank, Client customer) {
         super(parent, modal);
         initComponents();
         setLocationRelativeTo(parent);
 
-        setTitle(String.format("Account Details Page - %s %s", customer.getFirstName(), customer.getLastName()));
+        setTitle(String.format("Detalii cont - %s %s", customer.getPrenume(), customer.getNume()));
 
-        firstNameField.setText(customer.getFirstName());
-        lastNameField.setText(customer.getLastName());
-        ssnField.setText(customer.getCnp());
-        typeField.setText(customer.getAccount().getAccountType().name());
-        accountNumberField.setText(String.valueOf(customer.getAccount().getAccountNumber()));
-        balanceField.setText(String.format("Lei %.2f", customer.getAccount().getBalance()));
-        interestField.setText(String.valueOf(bank.checkInterest(customer.getAccount().getBalance(), 0) * 100) + "%");
-        feeField.setText(String.format("Lei %.2f", bank.getTransactionFee(customer.getAccount().getAccountType())));
+        prenumeField.setText(customer.getPrenume());
+        numeField.setText(customer.getNume());
+        cnpField.setText(customer.getCnp());
+        tipContField.setText(customer.getCont().getAccountType().name());
+        numarContField.setText(String.valueOf(customer.getCont().getNumarCont()));
+        soldField.setText(String.format("Lei %.2f", customer.getCont().getSold()));
+        rataDobanziiField.setText(String.valueOf(bank.verificaDobanda(customer.getCont().getSold(), 0) * 100) + "%");
+        comisionField.setText(String.format("Lei %.2f", bank.getComision(customer.getCont().getAccountType())));
     }
 
     /**
@@ -31,66 +31,66 @@ public class AccountDetailsPage extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        firstNameLabel = new javax.swing.JLabel();
-        firstNameField = new javax.swing.JLabel();
-        lastNameLabel = new javax.swing.JLabel();
-        lastNameField = new javax.swing.JLabel();
-        ssnLabel = new javax.swing.JLabel();
-        ssnField = new javax.swing.JLabel();
-        typeLabel = new javax.swing.JLabel();
-        typeField = new javax.swing.JLabel();
-        accountNumberLabel = new javax.swing.JLabel();
-        accountNumberField = new javax.swing.JLabel();
-        balanceLabel = new javax.swing.JLabel();
-        balanceField = new javax.swing.JLabel();
-        interestLabel = new javax.swing.JLabel();
-        interestField = new javax.swing.JLabel();
-        feeLabel = new javax.swing.JLabel();
-        feeField = new javax.swing.JLabel();
+        prenumeLabel = new javax.swing.JLabel();
+        prenumeField = new javax.swing.JLabel();
+        numeLabel = new javax.swing.JLabel();
+        numeField = new javax.swing.JLabel();
+        cnpLabel = new javax.swing.JLabel();
+        cnpField = new javax.swing.JLabel();
+        tipContLabel = new javax.swing.JLabel();
+        tipContField = new javax.swing.JLabel();
+        numarContLabel = new javax.swing.JLabel();
+        numarContField = new javax.swing.JLabel();
+        soldLabel = new javax.swing.JLabel();
+        soldField = new javax.swing.JLabel();
+        rataDobanziiLabel = new javax.swing.JLabel();
+        rataDobanziiField = new javax.swing.JLabel();
+        comisionLabel = new javax.swing.JLabel();
+        comisionField = new javax.swing.JLabel();
         okButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new java.awt.GridLayout(9, 2, 5, 5));
 
-        firstNameLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        firstNameLabel.setText("Prenume:");
-        getContentPane().add(firstNameLabel);
-        getContentPane().add(firstNameField);
+        prenumeLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        prenumeLabel.setText("Prenume:");
+        getContentPane().add(prenumeLabel);
+        getContentPane().add(prenumeField);
 
-        lastNameLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        lastNameLabel.setText("Nume:");
-        getContentPane().add(lastNameLabel);
-        getContentPane().add(lastNameField);
+        numeLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        numeLabel.setText("Nume:");
+        getContentPane().add(numeLabel);
+        getContentPane().add(numeField);
 
-        ssnLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        ssnLabel.setText("Cnp:");
-        getContentPane().add(ssnLabel);
-        getContentPane().add(ssnField);
+        cnpLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        cnpLabel.setText("Cnp:");
+        getContentPane().add(cnpLabel);
+        getContentPane().add(cnpField);
 
-        typeLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        typeLabel.setText("Tipul contului:");
-        getContentPane().add(typeLabel);
-        getContentPane().add(typeField);
+        tipContLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        tipContLabel.setText("Tipul contului:");
+        getContentPane().add(tipContLabel);
+        getContentPane().add(tipContField);
 
-        accountNumberLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        accountNumberLabel.setText("Numărul contului:");
-        getContentPane().add(accountNumberLabel);
-        getContentPane().add(accountNumberField);
+        numarContLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        numarContLabel.setText("Numărul contului:");
+        getContentPane().add(numarContLabel);
+        getContentPane().add(numarContField);
 
-        balanceLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        balanceLabel.setText("Bani în cont:");
-        getContentPane().add(balanceLabel);
-        getContentPane().add(balanceField);
+        soldLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        soldLabel.setText("Sold:");
+        getContentPane().add(soldLabel);
+        getContentPane().add(soldField);
 
-        interestLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        interestLabel.setText("Rata dobânzii:");
-        getContentPane().add(interestLabel);
-        getContentPane().add(interestField);
+        rataDobanziiLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        rataDobanziiLabel.setText("Rata dobânzii:");
+        getContentPane().add(rataDobanziiLabel);
+        getContentPane().add(rataDobanziiField);
 
-        feeLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        feeLabel.setText("Comision tranzacție:");
-        getContentPane().add(feeLabel);
-        getContentPane().add(feeField);
+        comisionLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        comisionLabel.setText("Comision tranzacție:");
+        getContentPane().add(comisionLabel);
+        getContentPane().add(comisionField);
 
         okButton.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         okButton.setForeground(new java.awt.Color(0, 0, 0));
@@ -113,22 +113,22 @@ public class AccountDetailsPage extends javax.swing.JDialog {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel accountNumberField;
-    private javax.swing.JLabel accountNumberLabel;
-    private javax.swing.JLabel balanceField;
-    private javax.swing.JLabel balanceLabel;
-    private javax.swing.JLabel feeField;
-    private javax.swing.JLabel feeLabel;
-    private javax.swing.JLabel firstNameField;
-    private javax.swing.JLabel firstNameLabel;
-    private javax.swing.JLabel interestField;
-    private javax.swing.JLabel interestLabel;
-    private javax.swing.JLabel lastNameField;
-    private javax.swing.JLabel lastNameLabel;
+    private javax.swing.JLabel cnpField;
+    private javax.swing.JLabel cnpLabel;
+    private javax.swing.JLabel comisionField;
+    private javax.swing.JLabel comisionLabel;
+    private javax.swing.JLabel numarContField;
+    private javax.swing.JLabel numarContLabel;
+    private javax.swing.JLabel numeField;
+    private javax.swing.JLabel numeLabel;
     private javax.swing.JButton okButton;
-    private javax.swing.JLabel ssnField;
-    private javax.swing.JLabel ssnLabel;
-    private javax.swing.JLabel typeField;
-    private javax.swing.JLabel typeLabel;
+    private javax.swing.JLabel prenumeField;
+    private javax.swing.JLabel prenumeLabel;
+    private javax.swing.JLabel rataDobanziiField;
+    private javax.swing.JLabel rataDobanziiLabel;
+    private javax.swing.JLabel soldField;
+    private javax.swing.JLabel soldLabel;
+    private javax.swing.JLabel tipContField;
+    private javax.swing.JLabel tipContLabel;
     // End of variables declaration//GEN-END:variables
 }

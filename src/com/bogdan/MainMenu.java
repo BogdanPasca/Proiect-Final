@@ -25,10 +25,10 @@ public class MainMenu extends javax.swing.JFrame {
     private void initComponents() {
 
         contentPanel = new javax.swing.JPanel();
-        addAccountButton = new javax.swing.JButton();
-        removeAccountButton = new javax.swing.JButton();
-        depositButton = new javax.swing.JButton();
-        withdrawButton = new javax.swing.JButton();
+        adaugaContButton = new javax.swing.JButton();
+        stergeContButton = new javax.swing.JButton();
+        adaugaBaniButton = new javax.swing.JButton();
+        retrageBaniButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         accountTable = new javax.swing.JTable();
         menuBar = new javax.swing.JMenuBar();
@@ -40,58 +40,58 @@ public class MainMenu extends javax.swing.JFrame {
 
         contentPanel.setForeground(new java.awt.Color(255, 255, 255));
 
-        addAccountButton.setBackground(new java.awt.Color(0, 102, 204));
-        addAccountButton.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        addAccountButton.setForeground(new java.awt.Color(255, 255, 255));
-        addAccountButton.setText("Adaugă cont");
-        addAccountButton.setBorder(null);
-        addAccountButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        addAccountButton.setSelected(true);
-        addAccountButton.addActionListener(new java.awt.event.ActionListener() {
+        adaugaContButton.setBackground(new java.awt.Color(0, 102, 204));
+        adaugaContButton.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        adaugaContButton.setForeground(new java.awt.Color(255, 255, 255));
+        adaugaContButton.setText("Adaugă cont");
+        adaugaContButton.setBorder(null);
+        adaugaContButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        adaugaContButton.setSelected(true);
+        adaugaContButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addAccountButtonActionPerformed(evt);
+                adaugaContButtonActionPerformed(evt);
             }
         });
 
-        removeAccountButton.setBackground(new java.awt.Color(0, 102, 204));
-        removeAccountButton.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        removeAccountButton.setForeground(new java.awt.Color(255, 255, 255));
-        removeAccountButton.setText("Șterge cont");
-        removeAccountButton.setBorder(null);
-        removeAccountButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        removeAccountButton.setEnabled(false);
-        removeAccountButton.setPreferredSize(new java.awt.Dimension(89, 23));
-        removeAccountButton.addActionListener(new java.awt.event.ActionListener() {
+        stergeContButton.setBackground(new java.awt.Color(0, 102, 204));
+        stergeContButton.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        stergeContButton.setForeground(new java.awt.Color(255, 255, 255));
+        stergeContButton.setText("Șterge cont");
+        stergeContButton.setBorder(null);
+        stergeContButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        stergeContButton.setEnabled(false);
+        stergeContButton.setPreferredSize(new java.awt.Dimension(89, 23));
+        stergeContButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                removeAccountButtonActionPerformed(evt);
+                stergeContButtonActionPerformed(evt);
             }
         });
 
-        depositButton.setBackground(new java.awt.Color(0, 102, 204));
-        depositButton.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        depositButton.setForeground(new java.awt.Color(255, 255, 255));
-        depositButton.setText("Adaugă bani");
-        depositButton.setBorder(null);
-        depositButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        depositButton.setEnabled(false);
-        depositButton.setMaximumSize(new java.awt.Dimension(83, 23));
-        depositButton.setMinimumSize(new java.awt.Dimension(83, 23));
-        depositButton.addActionListener(new java.awt.event.ActionListener() {
+        adaugaBaniButton.setBackground(new java.awt.Color(0, 102, 204));
+        adaugaBaniButton.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        adaugaBaniButton.setForeground(new java.awt.Color(255, 255, 255));
+        adaugaBaniButton.setText("Adaugă bani");
+        adaugaBaniButton.setBorder(null);
+        adaugaBaniButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        adaugaBaniButton.setEnabled(false);
+        adaugaBaniButton.setMaximumSize(new java.awt.Dimension(83, 23));
+        adaugaBaniButton.setMinimumSize(new java.awt.Dimension(83, 23));
+        adaugaBaniButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                depositButtonActionPerformed(evt);
+                adaugaBaniButtonActionPerformed(evt);
             }
         });
 
-        withdrawButton.setBackground(new java.awt.Color(0, 102, 204));
-        withdrawButton.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        withdrawButton.setForeground(new java.awt.Color(255, 255, 255));
-        withdrawButton.setText("Retrage bani");
-        withdrawButton.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        withdrawButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        withdrawButton.setEnabled(false);
-        withdrawButton.addActionListener(new java.awt.event.ActionListener() {
+        retrageBaniButton.setBackground(new java.awt.Color(0, 102, 204));
+        retrageBaniButton.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        retrageBaniButton.setForeground(new java.awt.Color(255, 255, 255));
+        retrageBaniButton.setText("Retrage bani");
+        retrageBaniButton.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        retrageBaniButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        retrageBaniButton.setEnabled(false);
+        retrageBaniButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                withdrawButtonActionPerformed(evt);
+                retrageBaniButtonActionPerformed(evt);
             }
         });
 
@@ -104,7 +104,7 @@ public class MainMenu extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Prenume", "Nume", "Numărul contului", "Bani în cont"
+                "Prenume", "Nume", "Numărul contului", "Sold"
             }
         ) {
             Class[] types = new Class [] {
@@ -145,13 +145,13 @@ public class MainMenu extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(contentPanelLayout.createSequentialGroup()
-                        .addComponent(addAccountButton, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(adaugaContButton, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(removeAccountButton, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(stergeContButton, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(depositButton, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(adaugaBaniButton, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(withdrawButton, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(retrageBaniButton, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 681, Short.MAX_VALUE))
                 .addContainerGap())
@@ -164,10 +164,10 @@ public class MainMenu extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contentPanelLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(depositButton, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(withdrawButton, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(removeAccountButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(addAccountButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(adaugaBaniButton, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(retrageBaniButton, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(stergeContButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(adaugaContButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 445, Short.MAX_VALUE)
                 .addContainerGap())
@@ -228,7 +228,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         if (evt.getClickCount() == 2) {
             int selectedRow = accountTable.getSelectedRow();
-            Customer customer = getSelectedCustomer(selectedRow);
+            Client customer = getSelectedCustomer(selectedRow);
             if (customer != null) {
                 AccountDetailsPage page = new AccountDetailsPage(this, true, bank, customer);
                 page.setVisible(true);
@@ -236,65 +236,65 @@ public class MainMenu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_accountTableMouseClicked
 
-    private void withdrawButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_withdrawButtonActionPerformed
-        depositOrWithdraw("withdraw");
-    }//GEN-LAST:event_withdrawButtonActionPerformed
+    private void retrageBaniButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_retrageBaniButtonActionPerformed
+        adaugaSauRetrageBani("withdraw");
+    }//GEN-LAST:event_retrageBaniButtonActionPerformed
 
-    private void depositButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_depositButtonActionPerformed
-        depositOrWithdraw("deposit");
-    }//GEN-LAST:event_depositButtonActionPerformed
+    private void adaugaBaniButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adaugaBaniButtonActionPerformed
+        adaugaSauRetrageBani("deposit");
+    }//GEN-LAST:event_adaugaBaniButtonActionPerformed
 
-    private void removeAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeAccountButtonActionPerformed
+    private void stergeContButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stergeContButtonActionPerformed
         int result = JOptionPane.showConfirmDialog(this, "Sunteți siguri?", "Select an Option", JOptionPane.YES_NO_OPTION);
         if (result == JOptionPane.OK_OPTION) {
             int selectedRow = accountTable.getSelectedRow();
             if (selectedRow >= 0) {
-                Customer customer = getSelectedCustomer(selectedRow);
+                Client customer = getSelectedCustomer(selectedRow);
                 if (customer != null) {
-                    bank.closeAccount(customer.getAccount().getAccountNumber());
+                    bank.closeAccount(customer.getCont().getNumarCont());
                     removeCustomerFromTable(selectedRow);
                 }
             }
         }
-    }//GEN-LAST:event_removeAccountButtonActionPerformed
+    }//GEN-LAST:event_stergeContButtonActionPerformed
 
-    private void addAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addAccountButtonActionPerformed
+    private void adaugaContButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adaugaContButtonActionPerformed
         AddAccountMenu menu = new AddAccountMenu(this, true, bank);
         menu.setVisible(true);
         if (menu.getCustomer() != null) {
             addCustomerToTable(menu.getCustomer());
         }
-    }//GEN-LAST:event_addAccountButtonActionPerformed
+    }//GEN-LAST:event_adaugaContButtonActionPerformed
 
-    private void depositOrWithdraw(String action) {
+    private void adaugaSauRetrageBani(String action) {
         int selectedRow = accountTable.getSelectedRow();
-        Customer customer = getSelectedCustomer(selectedRow);
-        if (customer != null) {
+        Client client = getSelectedCustomer(selectedRow);
+        if (client != null) {
             javax.swing.JDialog window = null;
             if (action.equals("deposit")) {
-                window = new DepositMenu(this, true, bank, customer);
+                window = new DepositMenu(this, true, bank, client);
             } else if (action.equals("withdraw")) {
-                window = new WithdrawalMenu(this, true, bank, customer);
+                window = new MeniuRetragereBani(this, true, bank, client);
             }
             if (window != null) {
                 window.setVisible(true);
             }
-            reloadCustomerRowData(selectedRow, customer.getAccount().getAccountNumber());
+            reloadCustomerRowData(selectedRow, client.getCont().getNumarCont());
         }
     }
 
-    private Customer getSelectedCustomer(int selectedRow) {
-        Customer customer = null;
+    private Client getSelectedCustomer(int selectedRow) {
+        Client client = null;
         if (selectedRow >= 0) {
             int accountNumber = (int) accountTable.getValueAt(selectedRow, 2);
-            customer = bank.getCustomer(accountNumber);
+            client = bank.getClient(accountNumber);
         }
-        return customer;
+        return client;
     }
 
-    private void addCustomerToTable(Customer customer) {
+    private void addCustomerToTable(Client client) {
         model.addRow(new Object[]{});
-        reloadCustomerRowData(model.getRowCount() - 1, customer.getAccount().getAccountNumber());
+        reloadCustomerRowData(model.getRowCount() - 1, client.getCont().getNumarCont());
     }
 
     private void removeCustomerFromTable(int row) {
@@ -302,11 +302,11 @@ public class MainMenu extends javax.swing.JFrame {
     }
 
     private void reloadCustomerRowData(int selectedRow, int accountId) {
-        Customer customer = bank.getCustomer(accountId);
-        model.setValueAt(customer.getFirstName(), selectedRow, 0);
-        model.setValueAt(customer.getLastName(), selectedRow, 1);
-        model.setValueAt(customer.getAccount().getAccountNumber(), selectedRow, 2);
-        model.setValueAt(String.format("%.2f", customer.getAccount().getBalance()), selectedRow, 3);
+        Client customer = bank.getClient(accountId);
+        model.setValueAt(customer.getPrenume(), selectedRow, 0);
+        model.setValueAt(customer.getNume(), selectedRow, 1);
+        model.setValueAt(customer.getCont().getNumarCont(), selectedRow, 2);
+        model.setValueAt(String.format("%.2f", customer.getCont().getSold()), selectedRow, 3);
     }
 
     private void reloadTable() {
@@ -314,15 +314,15 @@ public class MainMenu extends javax.swing.JFrame {
         for (int i = model.getRowCount() - 1; i >= 0; i--) {
             model.removeRow(i);
         }
-        for (Customer c : bank.getCustomers()) {
+        for (Client c : bank.getCustomers()) {
             addCustomerToTable(c);
         }
     }
 
     private void setAccountButtonsActive(boolean active) {
-        depositButton.setEnabled(active);
-        withdrawButton.setEnabled(active);
-        removeAccountButton.setEnabled(active);
+        adaugaBaniButton.setEnabled(active);
+        retrageBaniButton.setEnabled(active);
+        stergeContButton.setEnabled(active);
     }
 
     /**
@@ -356,15 +356,15 @@ public class MainMenu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable accountTable;
-    private javax.swing.JButton addAccountButton;
+    private javax.swing.JButton adaugaBaniButton;
+    private javax.swing.JButton adaugaContButton;
     private javax.swing.JPanel contentPanel;
-    private javax.swing.JButton depositButton;
     private javax.swing.JMenuItem exitMenuItem;
     private javax.swing.JMenu fileMenu;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JMenuBar menuBar;
-    private javax.swing.JButton removeAccountButton;
-    private javax.swing.JButton withdrawButton;
+    private javax.swing.JButton retrageBaniButton;
+    private javax.swing.JButton stergeContButton;
     // End of variables declaration//GEN-END:variables
 
 }

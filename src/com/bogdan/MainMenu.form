@@ -117,13 +117,13 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="addAccountButton" min="-2" pref="106" max="-2" attributes="0"/>
+                          <Component id="adaugaContButton" min="-2" pref="106" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                          <Component id="removeAccountButton" min="-2" pref="132" max="-2" attributes="0"/>
+                          <Component id="stergeContButton" min="-2" pref="132" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="depositButton" min="-2" pref="132" max="-2" attributes="0"/>
+                          <Component id="adaugaBaniButton" min="-2" pref="132" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="withdrawButton" min="-2" pref="129" max="-2" attributes="0"/>
+                          <Component id="retrageBaniButton" min="-2" pref="129" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <Component id="jScrollPane1" pref="681" max="32767" attributes="0"/>
@@ -140,12 +140,12 @@
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="depositButton" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="withdrawButton" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                              <Component id="adaugaBaniButton" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                              <Component id="retrageBaniButton" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <Component id="removeAccountButton" alignment="0" max="32767" attributes="0"/>
-                      <Component id="addAccountButton" alignment="0" max="32767" attributes="0"/>
+                      <Component id="stergeContButton" alignment="0" max="32767" attributes="0"/>
+                      <Component id="adaugaContButton" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jScrollPane1" pref="445" max="32767" attributes="0"/>
@@ -155,7 +155,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="addAccountButton">
+        <Component class="javax.swing.JButton" name="adaugaContButton">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="cc" green="66" red="0" type="rgb"/>
@@ -176,10 +176,10 @@
             <Property name="selected" type="boolean" value="true"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addAccountButtonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="adaugaContButtonActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="removeAccountButton">
+        <Component class="javax.swing.JButton" name="stergeContButton">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="cc" green="66" red="0" type="rgb"/>
@@ -203,10 +203,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="removeAccountButtonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="stergeContButtonActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="depositButton">
+        <Component class="javax.swing.JButton" name="adaugaBaniButton">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="cc" green="66" red="0" type="rgb"/>
@@ -233,10 +233,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="depositButtonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="adaugaBaniButtonActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="withdrawButton">
+        <Component class="javax.swing.JButton" name="retrageBaniButton">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="cc" green="66" red="0" type="rgb"/>
@@ -259,7 +259,7 @@
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="withdrawButtonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="retrageBaniButtonActionPerformed"/>
           </Events>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -286,7 +286,7 @@
                     <Column editable="false" title="Prenume" type="java.lang.String"/>
                     <Column editable="false" title="Nume" type="java.lang.String"/>
                     <Column editable="false" title="Num&#x103;rul contului" type="java.lang.Integer"/>
-                    <Column editable="false" title="Bani &#xee;n cont" type="java.lang.String"/>
+                    <Column editable="false" title="Sold" type="java.lang.String"/>
                   </Table>
                 </Property>
                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">

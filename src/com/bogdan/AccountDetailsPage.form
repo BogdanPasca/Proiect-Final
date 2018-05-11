@@ -28,7 +28,7 @@
     <Property name="verticalGap" type="int" value="5"/>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="firstNameLabel">
+    <Component class="javax.swing.JLabel" name="prenumeLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Calibri" size="18" style="0"/>
@@ -36,9 +36,9 @@
         <Property name="text" type="java.lang.String" value="Prenume:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="firstNameField">
+    <Component class="javax.swing.JLabel" name="prenumeField">
     </Component>
-    <Component class="javax.swing.JLabel" name="lastNameLabel">
+    <Component class="javax.swing.JLabel" name="numeLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Calibri" size="18" style="0"/>
@@ -46,9 +46,9 @@
         <Property name="text" type="java.lang.String" value="Nume:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lastNameField">
+    <Component class="javax.swing.JLabel" name="numeField">
     </Component>
-    <Component class="javax.swing.JLabel" name="ssnLabel">
+    <Component class="javax.swing.JLabel" name="cnpLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Calibri" size="18" style="0"/>
@@ -56,9 +56,9 @@
         <Property name="text" type="java.lang.String" value="Cnp:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="ssnField">
+    <Component class="javax.swing.JLabel" name="cnpField">
     </Component>
-    <Component class="javax.swing.JLabel" name="typeLabel">
+    <Component class="javax.swing.JLabel" name="tipContLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Calibri" size="18" style="0"/>
@@ -66,9 +66,9 @@
         <Property name="text" type="java.lang.String" value="Tipul contului:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="typeField">
+    <Component class="javax.swing.JLabel" name="tipContField">
     </Component>
-    <Component class="javax.swing.JLabel" name="accountNumberLabel">
+    <Component class="javax.swing.JLabel" name="numarContLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Calibri" size="18" style="0"/>
@@ -76,19 +76,19 @@
         <Property name="text" type="java.lang.String" value="Num&#x103;rul contului:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="accountNumberField">
+    <Component class="javax.swing.JLabel" name="numarContField">
     </Component>
-    <Component class="javax.swing.JLabel" name="balanceLabel">
+    <Component class="javax.swing.JLabel" name="soldLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Calibri" size="18" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Bani &#xee;n cont:"/>
+        <Property name="text" type="java.lang.String" value="Sold:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="balanceField">
+    <Component class="javax.swing.JLabel" name="soldField">
     </Component>
-    <Component class="javax.swing.JLabel" name="interestLabel">
+    <Component class="javax.swing.JLabel" name="rataDobanziiLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Calibri" size="18" style="0"/>
@@ -96,9 +96,9 @@
         <Property name="text" type="java.lang.String" value="Rata dob&#xe2;nzii:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="interestField">
+    <Component class="javax.swing.JLabel" name="rataDobanziiField">
     </Component>
-    <Component class="javax.swing.JLabel" name="feeLabel">
+    <Component class="javax.swing.JLabel" name="comisionLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Calibri" size="18" style="0"/>
@@ -106,7 +106,7 @@
         <Property name="text" type="java.lang.String" value="Comision tranzac&#x21b;ie:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="feeField">
+    <Component class="javax.swing.JLabel" name="comisionField">
     </Component>
     <Component class="javax.swing.JButton" name="okButton">
       <Properties>

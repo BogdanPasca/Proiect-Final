@@ -2,11 +2,11 @@ package com.bogdan;
 
 public abstract class Account {
 
-    private double balance = 0;
-    private int accountNumber;
+    private double sold = 0;
+    private int numarCont;
 
-    Account(int accountNumber) {
-        this.accountNumber = accountNumber;
+    Account(int numarCont) {
+        this.numarCont = numarCont;
     }
 
     public abstract AccountType getAccountType();
@@ -14,28 +14,19 @@ public abstract class Account {
     @Override
     public String toString() {
         return "Account Type: " + getAccountType().name() + " Account\n"
-                + "Account Number: " + this.getAccountNumber() + "\n"
-                + "Balance: " + this.getBalance() + "\n";
+                + "Account Number: " + this.getNumarCont() + "\n"
+                + "Balance: " + this.getSold() + "\n";
     }
 
-    /**
-     * @return the balance
-     */
-    public double getBalance() {
-        return balance;
+    public double getSold() {
+        return sold;
     }
 
-    /**
-     * @param balance the balance to set
-     */
-    public final void setBalance(double balance) {
-        this.balance = balance;
+    public final void setSold(double sold) {
+        this.sold = sold;
     }
 
-    /**
-     * @return the accountNumber
-     */
-    public int getAccountNumber() {
-        return accountNumber;
+    public int getNumarCont() {
+        return numarCont;
     }
 }

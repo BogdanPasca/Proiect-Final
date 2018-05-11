@@ -25,16 +25,16 @@ public class DbService {
     }
 
     //Create (Add Account)
-    int addAccount(String firstName, String lastName, String cnp, AccountType accountType, Double balance) {
+    int addAccount(String prenume, String nume, String cnp, AccountType tip, Double sold) {
         int userId = -1;
         int accountId = -1;
         Connection connection = connect();
         try {
             connection.setAutoCommit(false);
             //Add User
-            try (PreparedStatement addUser = connection.prepareStatement("INSERT INTO Users(FirstName, LastName, CNP) VALUES(?,?,?)", Statement.RETURN_GENERATED_KEYS)) {
-                addUser.setString(1, firstName);
-                addUser.setString(2, lastName);
+            try (PreparedStatement addUser = connection.prepareStatement("INSERT INTO Users(Prenume, Nume, CNP) VALUES(?,?,?)", Statement.RETURN_GENERATED_KEYS)) {
+                addUser.setString(1, prenume);
+                addUser.setString(2, nume);
                 addUser.setString(3, cnp);
                 addUser.executeUpdate();
                 ResultSet addUserResults = addUser.getGeneratedKeys();
@@ -43,9 +43,9 @@ public class DbService {
                 }
             }
             //Add Account
-            try (PreparedStatement addAccount = connection.prepareStatement("INSERT INTO Accounts(Type, Balance) VALUES(?,?)", Statement.RETURN_GENERATED_KEYS)) {
-                addAccount.setString(1, accountType.name());
-                addAccount.setDouble(2, balance);
+            try (PreparedStatement addAccount = connection.prepareStatement("INSERT INTO Accounts(Tip, Sold) VALUES(?,?)", Statement.RETURN_GENERATED_KEYS)) {
+                addAccount.setString(1, tip.name());
+                addAccount.setDouble(2, sold);
                 addAccount.executeUpdate();
                 ResultSet addAccountResults = addAccount.getGeneratedKeys();
                 if (addAccountResults.next()) {
@@ -72,30 +72,30 @@ public class DbService {
     }
 
     //Read (Get Details)
-    Customer getAccount(int accountId) {
-        Customer customer = null;
+    Client getAccount(int accountId) {
+        Client customer = null;
         Connection connection = connect();
         try {
             try (PreparedStatement findUser = connection.prepareStatement(
-                    "SELECT FirstName,LastName,CNP,Type,Balance "
+                    "SELECT Prenume,Nume,CNP,Tip,Sold "
                     + "FROM Users a JOIN Mappings b on a.ID = b.UserId "
                     + "JOIN Accounts c on b.AccountId = c.ID "
                     + "WHERE c.ID = ?")) {
                 findUser.setInt(1, accountId);
                 ResultSet findUserResults = findUser.executeQuery();
                 if (findUserResults.next()) {
-                    String firstName = findUserResults.getString("FirstName");
-                    String lastName = findUserResults.getString("LastName");
+                    String prenume = findUserResults.getString("Prenume");
+                    String nume = findUserResults.getString("Nume");
                     String cnp = findUserResults.getString("CNP");
-                    String accountType = findUserResults.getString("Type");
-                    Double balance = findUserResults.getDouble("Balance");
+                    String accountType = findUserResults.getString("Tip");
+                    Double sold = findUserResults.getDouble("Sold");
                     Account account;
                     if (accountType.equals(AccountType.Depozit.name())) {
-                        account = new Checking(accountId, balance);
+                        account = new Checking(accountId, sold);
                     } else {
-                        account = new Savings(accountId, balance);
+                        account = new Savings(accountId, sold);
                     }
-                    customer = new Customer(firstName, lastName, cnp, account);
+                    customer = new Client(prenume, nume, cnp, account);
                 }
             }
         } catch (SQLException ex) {
@@ -110,7 +110,7 @@ public class DbService {
         Connection connection = connect();
         try {
             try (PreparedStatement updateBalance = connection.prepareStatement(
-                    "UPDATE Accounts SET Balance = ? WHERE ID = ?")) {
+                    "UPDATE Accounts SET Sold = ? WHERE ID = ?")) {
                 updateBalance.setDouble(1, newBalance);
                 updateBalance.setInt(2, accountId);
                 updateBalance.executeUpdate();
@@ -142,29 +142,29 @@ public class DbService {
         return success;
     }
 
-    ArrayList<Customer> getAllAccounts() {
-        ArrayList<Customer> customers = new ArrayList<Customer>();
+    ArrayList<Client> getAllAccounts() {
+        ArrayList<Client> customers = new ArrayList<Client>();
         Connection connection = connect();
         try {
             try (PreparedStatement findUser = connection.prepareStatement(
-                    "SELECT AccountId,FirstName,LastName,CNP,Type,Balance "
+                    "SELECT AccountId,Prenume,Nume,CNP,Tip,Sold "
                     + "FROM Users a JOIN Mappings b on a.ID = b.UserId "
                     + "JOIN Accounts c on b.AccountId = c.ID")) {
                 ResultSet findUserResults = findUser.executeQuery();
                 while (findUserResults.next()) {
-                    String firstName = findUserResults.getString("FirstName");
-                    String lastName = findUserResults.getString("LastName");
+                    String prenume = findUserResults.getString("Prenume");
+                    String nume = findUserResults.getString("Nume");
                     String cnp = findUserResults.getString("CNP");
-                    String accountType = findUserResults.getString("Type");
-                    Double balance = findUserResults.getDouble("Balance");
+                    String accountType = findUserResults.getString("Tip");
+                    Double sold = findUserResults.getDouble("Sold");
                     int accountId = findUserResults.getInt("AccountId");
                     Account account;
                     if (accountType.equals(AccountType.Depozit.name())) {
-                        account = new Checking(accountId, balance);
+                        account = new Checking(accountId, sold);
                     } else {
-                        account = new Savings(accountId, balance);
+                        account = new Savings(accountId, sold);
                     }
-                    Customer customer = new Customer(firstName, lastName, cnp, account);
+                    Client customer = new Client(prenume, nume, cnp, account);
                     customers.add(customer);
                 }
             }
@@ -230,7 +230,7 @@ public class DbService {
 //    }
 //
 //    //Create (Add Account)
-//    int addAccount(String firstName, String lastName, String cnp, AccountType accountType, Double balance) {
+//    int addAccount(String prenume, String nume, String cnp, AccountType accountType, Double sold) {
 //        int userId = -1;
 //        int accountId = -1;
 //        Connection connection = connect();
@@ -238,8 +238,8 @@ public class DbService {
 //            connection.setAutoCommit(false);
 //            //Add User
 //            try (PreparedStatement addUser = connection.prepareStatement("INSERT INTO Users(FirstName, LastName, CNP) VALUES(?,?,?)", Statement.RETURN_GENERATED_KEYS)) {
-//                addUser.setString(1, firstName);
-//                addUser.setString(2, lastName);
+//                addUser.setString(1, prenume);
+//                addUser.setString(2, nume);
 //                addUser.setString(3, cnp);
 //                addUser.executeUpdate();
 //                ResultSet addUserResults = addUser.getGeneratedKeys();
@@ -250,7 +250,7 @@ public class DbService {
 //            //Add Account
 //            try (PreparedStatement addAccount = connection.prepareStatement("INSERT INTO Accounts(Type, Balance) VALUES(?,?)", Statement.RETURN_GENERATED_KEYS)) {
 //                addAccount.setString(1, accountType.name());
-//                addAccount.setDouble(2, balance);
+//                addAccount.setDouble(2, sold);
 //                addAccount.executeUpdate();
 //                ResultSet addAccountResults = addAccount.getGeneratedKeys();
 //                if (addAccountResults.next()) {
@@ -276,8 +276,8 @@ public class DbService {
 //        return accountId;
 //    }
 //    //Read (Get Details)
-//    Customer getAccount(int accountId) {
-//        Customer customer = null;
+//    Client getAccount(int accountId) {
+//        Client customer = null;
 //        Connection connection = connect();
 //        try {
 //            try (PreparedStatement findUser = connection.prepareStatement(
@@ -288,18 +288,18 @@ public class DbService {
 //                findUser.setInt(1, accountId);
 //                ResultSet findUserResults = findUser.executeQuery();
 //                if (findUserResults.next()) {
-//                    String firstName = findUserResults.getString("FirstName");
-//                    String lastName = findUserResults.getString("LastName");
+//                    String prenume = findUserResults.getString("FirstName");
+//                    String nume = findUserResults.getString("LastName");
 //                    String cnp = findUserResults.getString("CNP");
 //                    String accountType = findUserResults.getString("Type");
-//                    Double balance = findUserResults.getDouble("Balance");
+//                    Double sold = findUserResults.getDouble("Balance");
 //                    Account account;
 //                    if (accountType.equals(AccountType.Depozit.name())) {
-//                        account = new Depozit(accountId, balance);
+//                        account = new Depozit(accountId, sold);
 //                    } else {
-//                        account = new Economii(accountId, balance);
+//                        account = new Economii(accountId, sold);
 //                    }
-//                    customer = new Customer(firstName, lastName, cnp, account);
+//                    customer = new Client(prenume, nume, cnp, account);
 //                }
 //            }
 //        } catch (SQLException ex) {
@@ -354,19 +354,19 @@ public class DbService {
 //                    + "JOIN Accounts c on b.AccountId = c.ID")) {
 //                ResultSet findUserResults = findUser.executeQuery();
 //                while (findUserResults.next()) {
-//                    String firstName = findUserResults.getString("FirstName");
-//                    String lastName = findUserResults.getString("LastName");
+//                    String prenume = findUserResults.getString("FirstName");
+//                    String nume = findUserResults.getString("LastName");
 //                    String cnp = findUserResults.getString("CNP");
 //                    String accountType = findUserResults.getString("Type");
-//                    Double balance = findUserResults.getDouble("Balance");
+//                    Double sold = findUserResults.getDouble("Balance");
 //                    int accountId = findUserResults.getInt("AccountId");
 //                    Account account;
 //                    if (accountType.equals(AccountType.Depozit.name())) {
-//                        account = new Depozit(accountId, balance);
+//                        account = new Depozit(accountId, sold);
 //                    } else {
-//                        account = new Economii(accountId, balance);
+//                        account = new Economii(accountId, sold);
 //                    }
-//                    Customer customer = new Customer(firstName, lastName, cnp, account);
+//                    Client customer = new Client(prenume, nume, cnp, account);
 //                    customers.add(customer);
 //                }
 //            }

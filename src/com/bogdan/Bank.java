@@ -9,52 +9,52 @@ public class Bank{
 
     private DbService database = new DbService();
 
-    Customer openAccount(String firstName, String lastName, String cnp, AccountType type, Double balance) {
-        int accountId = database.addAccount(firstName, lastName, cnp, type, balance);
-        Customer customer = database.getAccount(accountId);
-        return customer;
+    Client deschideCont(String prenume, String nume, String cnp, AccountType type, Double sold) {
+        int accountId = database.addAccount(prenume, nume, cnp, type, sold);
+        Client client = database.getAccount(accountId);
+        return client;
     }
 
     boolean closeAccount(int accountId) {
         return database.deleteAccount(accountId);
     }
 
-    Customer getCustomer(int accountId) {
+    Client getClient(int accountId) {
         return database.getAccount(accountId);
     }
 
-    ArrayList<Customer> getCustomers() {
+    ArrayList<Client> getCustomers() {
         return database.getAllAccounts();
     }
 
-    void withdraw(int accountId, double amount) throws InsufficientFundsException {
-        Customer customer = getCustomer(accountId);
-        double transactionFee = getTransactionFee(customer.getAccount().getAccountType());
-        if (amount + transactionFee > customer.getAccount().getBalance()) {
-            throw new InsufficientFundsException();
+    void retrageBani(int accountId, double suma) throws FonduriInsuficienteException {
+        Client client = getClient(accountId);
+        double comisionTranzactie = getComision(client.getCont().getAccountType());
+        if (suma + comisionTranzactie > client.getCont().getSold()) {
+            throw new FonduriInsuficienteException();
         }
-        double newBalance = customer.getAccount().getBalance() - (amount + transactionFee);
-        database.updateAccount(accountId, newBalance);
+        double noulSold = client.getCont().getSold() - (suma + comisionTranzactie);
+        database.updateAccount(accountId, noulSold);
     }
 
-    void deposit(int accountId, double amount) throws InvalidAmountException {
-        Customer customer = getCustomer(accountId);
-        if (amount <= 0) {
+    void deposit(int accountId, double suma) throws InvalidAmountException {
+        Client client = getClient(accountId);
+        if (suma <= 0) {
             throw new InvalidAmountException();
         }
-        double interest = checkInterest(customer.getAccount().getBalance(), amount);
-        double amountToDeposit = amount + (amount * interest);
-        database.updateAccount(accountId, customer.getAccount().getBalance() + amountToDeposit);
+        double dobanda = verificaDobanda(client.getCont().getSold(), suma);
+        double amountToDeposit = suma + (suma * dobanda);
+        database.updateAccount(accountId, client.getCont().getSold() + amountToDeposit);
     }
 
-    public double checkInterest(double balance, double amount) {
-        double interest = 0;
+    public double verificaDobanda(double balance, double amount) {
+        double dobanda = 0;
         if (balance + amount > 10000) {
-            interest = 0.05;
+            dobanda = 0.05;
         } else {
-            interest = 0.02;
+            dobanda = 0.02;
         }
-        return interest;
+        return dobanda;
     }
 
     public static double round(double value, int places) {
@@ -66,20 +66,20 @@ public class Bank{
         return bd.doubleValue();
     }
 
-    double getTransactionFee(AccountType accountType) {
-        double transactionFee = 0;
+    double getComision(AccountType accountType) {
+        double comision = 0;
         switch (accountType) {
             case Depozit:
-                transactionFee = 5;
+                comision = 5;
                 break;
             case Economii:
-                transactionFee = 3;
+                comision = 3;
                 break;
             case Undefined:
             default:
-                transactionFee = 0;
+                comision = 0;
         }
-        return transactionFee;
+        return comision;
     }
 
 }

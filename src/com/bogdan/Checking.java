@@ -2,9 +2,9 @@ package com.bogdan;
 
 public class Checking extends Account {
 
-    Checking(int accountNumber, double initialDeposit) {
-        super(accountNumber);
-        this.setBalance(initialDeposit);
+    Checking(int numarCont, double depozitInitial) {
+        super(numarCont);
+        this.setSold(depozitInitial);
     }
 
     @Override

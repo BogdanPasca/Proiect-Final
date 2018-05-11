@@ -4,7 +4,7 @@ public class Savings extends Account {
 
     Savings(int accountNumber, double initialDeposit) {
         super(accountNumber);
-        this.setBalance(initialDeposit);
+        this.setSold(initialDeposit);
     }
 
     @Override

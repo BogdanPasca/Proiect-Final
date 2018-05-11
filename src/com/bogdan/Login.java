@@ -30,15 +30,15 @@ public class Login extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        pozaAutentificarejLabel = new javax.swing.JLabel();
+        textAutentificarejLabel = new javax.swing.JLabel();
+        autentificareLabel = new javax.swing.JLabel();
         jLabelParola = new javax.swing.JLabel();
-        jTxtUtilizator = new javax.swing.JTextField();
-        jLabelUtilizator = new javax.swing.JLabel();
+        utilizatorJtxt = new javax.swing.JTextField();
+        utilizatorLabel = new javax.swing.JLabel();
         jPassword = new javax.swing.JPasswordField();
-        jBtnReset = new javax.swing.JButton();
-        jBtnLogin = new javax.swing.JButton();
+        reseteazajBtn = new javax.swing.JButton();
+        continuajBtnL = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Autentificare");
@@ -51,13 +51,13 @@ public class Login extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(0, 102, 204));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/bogdan/login2.png"))); // NOI18N
+        pozaAutentificarejLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/bogdan/login2.png"))); // NOI18N
 
-        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Te rugăm să te autentifici");
+        textAutentificarejLabel.setBackground(new java.awt.Color(255, 255, 255));
+        textAutentificarejLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        textAutentificarejLabel.setForeground(new java.awt.Color(255, 255, 255));
+        textAutentificarejLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        textAutentificarejLabel.setText("Te rugăm să te autentifici");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -67,31 +67,31 @@ public class Login extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(30, 30, 30)
-                        .addComponent(jLabel2))
+                        .addComponent(pozaAutentificarejLabel))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(50, 50, 50)
-                        .addComponent(jLabel3)))
+                        .addComponent(textAutentificarejLabel)))
                 .addContainerGap(34, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(83, 83, 83)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pozaAutentificarejLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
-                .addComponent(jLabel3)
+                .addComponent(textAutentificarejLabel)
                 .addContainerGap(181, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(0, 0, 320, 520);
 
-        jLabel4.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Autentificare");
-        jPanel1.add(jLabel4);
-        jLabel4.setBounds(380, 80, 200, 50);
+        autentificareLabel.setFont(new java.awt.Font("Calibri", 0, 36)); // NOI18N
+        autentificareLabel.setForeground(new java.awt.Color(102, 102, 102));
+        autentificareLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        autentificareLabel.setText("Autentificare");
+        jPanel1.add(autentificareLabel);
+        autentificareLabel.setBounds(380, 80, 200, 50);
 
         jLabelParola.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
         jLabelParola.setForeground(new java.awt.Color(51, 51, 51));
@@ -99,18 +99,18 @@ public class Login extends javax.swing.JFrame {
         jPanel1.add(jLabelParola);
         jLabelParola.setBounds(360, 270, 90, 16);
 
-        jTxtUtilizator.setBackground(new java.awt.Color(255, 255, 255));
-        jTxtUtilizator.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        jTxtUtilizator.setForeground(new java.awt.Color(51, 51, 51));
-        jTxtUtilizator.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 51)));
-        jPanel1.add(jTxtUtilizator);
-        jTxtUtilizator.setBounds(360, 180, 260, 40);
+        utilizatorJtxt.setBackground(new java.awt.Color(255, 255, 255));
+        utilizatorJtxt.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        utilizatorJtxt.setForeground(new java.awt.Color(51, 51, 51));
+        utilizatorJtxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 51)));
+        jPanel1.add(utilizatorJtxt);
+        utilizatorJtxt.setBounds(360, 180, 260, 40);
 
-        jLabelUtilizator.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
-        jLabelUtilizator.setForeground(new java.awt.Color(51, 51, 51));
-        jLabelUtilizator.setText("Utilizator");
-        jPanel1.add(jLabelUtilizator);
-        jLabelUtilizator.setBounds(360, 160, 90, 16);
+        utilizatorLabel.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
+        utilizatorLabel.setForeground(new java.awt.Color(51, 51, 51));
+        utilizatorLabel.setText("Utilizator");
+        jPanel1.add(utilizatorLabel);
+        utilizatorLabel.setBounds(360, 160, 90, 16);
 
         jPassword.setBackground(new java.awt.Color(255, 255, 255));
         jPassword.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
@@ -129,36 +129,36 @@ public class Login extends javax.swing.JFrame {
         jPanel1.add(jPassword);
         jPassword.setBounds(360, 290, 260, 40);
 
-        jBtnReset.setBackground(new java.awt.Color(0, 102, 204));
-        jBtnReset.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        jBtnReset.setForeground(new java.awt.Color(255, 255, 255));
-        jBtnReset.setText("Resetează");
-        jBtnReset.setBorder(null);
-        jBtnReset.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jBtnReset.addActionListener(new java.awt.event.ActionListener() {
+        reseteazajBtn.setBackground(new java.awt.Color(0, 102, 204));
+        reseteazajBtn.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        reseteazajBtn.setForeground(new java.awt.Color(255, 255, 255));
+        reseteazajBtn.setText("Resetează");
+        reseteazajBtn.setBorder(null);
+        reseteazajBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        reseteazajBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBtnResetActionPerformed(evt);
+                reseteazajBtnActionPerformed(evt);
             }
         });
-        jPanel1.add(jBtnReset);
-        jBtnReset.setBounds(520, 380, 100, 30);
+        jPanel1.add(reseteazajBtn);
+        reseteazajBtn.setBounds(520, 380, 100, 30);
 
-        jBtnLogin.setBackground(new java.awt.Color(0, 102, 204));
-        jBtnLogin.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        jBtnLogin.setForeground(new java.awt.Color(255, 255, 255));
-        jBtnLogin.setText("Continuă");
-        jBtnLogin.setBorder(null);
-        jBtnLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jBtnLogin.setMaximumSize(new java.awt.Dimension(92, 23));
-        jBtnLogin.setMinimumSize(new java.awt.Dimension(92, 23));
-        jBtnLogin.setPreferredSize(new java.awt.Dimension(92, 23));
-        jBtnLogin.addActionListener(new java.awt.event.ActionListener() {
+        continuajBtnL.setBackground(new java.awt.Color(0, 102, 204));
+        continuajBtnL.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        continuajBtnL.setForeground(new java.awt.Color(255, 255, 255));
+        continuajBtnL.setText("Continuă");
+        continuajBtnL.setBorder(null);
+        continuajBtnL.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        continuajBtnL.setMaximumSize(new java.awt.Dimension(92, 23));
+        continuajBtnL.setMinimumSize(new java.awt.Dimension(92, 23));
+        continuajBtnL.setPreferredSize(new java.awt.Dimension(92, 23));
+        continuajBtnL.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBtnLoginActionPerformed(evt);
+                continuajBtnLActionPerformed(evt);
             }
         });
-        jPanel1.add(jBtnLogin);
-        jBtnLogin.setBounds(360, 380, 100, 30);
+        jPanel1.add(continuajBtnL);
+        continuajBtnL.setBounds(360, 380, 100, 30);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -179,49 +179,48 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jPasswordActionPerformed
 
-    private void jBtnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnResetActionPerformed
+    private void reseteazajBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reseteazajBtnActionPerformed
         jPassword.setText(null);
-        jTxtUtilizator.setText(null);
-    }//GEN-LAST:event_jBtnResetActionPerformed
+        utilizatorJtxt.setText(null);
+    }//GEN-LAST:event_reseteazajBtnActionPerformed
 
-    private void jBtnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnLoginActionPerformed
+    private void continuajBtnLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_continuajBtnLActionPerformed
         String password = jPassword.getText();
-        String username = jTxtUtilizator.getText();
+        String username = utilizatorJtxt.getText();
         if (password.equalsIgnoreCase("changeit") && (username.equalsIgnoreCase("bogdan"))) {
-            jTxtUtilizator.setText(null);
+            utilizatorJtxt.setText(null);
             jPassword.setText(null);
-            //systemExit();
             close();
-            
+
             com.bogdan.MainMenu programBanca = new com.bogdan.MainMenu();
             programBanca.setVisible(true);
 
         } else {
             JOptionPane.showMessageDialog(null, "Datele de autentificare sunt gresite!", "Login Error", JOptionPane.ERROR_MESSAGE);
             jPassword.setText(null);
-            jTxtUtilizator.setText(null);
+            utilizatorJtxt.setText(null);
         }
-    }//GEN-LAST:event_jBtnLoginActionPerformed
+    }//GEN-LAST:event_continuajBtnLActionPerformed
 
     private void jPasswordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-             String password = jPassword.getText();
-        String username = jTxtUtilizator.getText();
-        if (password.equalsIgnoreCase("changeit") && (username.equalsIgnoreCase("bogdan"))) {
-            jTxtUtilizator.setText(null);
-            jPassword.setText(null);
-           //O metoda care inchide fereastra de login dupa ce datele au fost introduse corect.
-            close();
-            //deschide layout-ul cu interfata programului bancar
-            com.bogdan.MainMenu programBanca = new com.bogdan.MainMenu();
-            programBanca.setVisible(true);
+            String password = jPassword.getText();
+            String username = utilizatorJtxt.getText();
+            if (password.equalsIgnoreCase("changeit") && (username.equalsIgnoreCase("bogdan"))) {
+                utilizatorJtxt.setText(null);
+                jPassword.setText(null);
+                //O metoda care inchide fereastra de login dupa ce datele au fost introduse corect.
+                close();
+                //deschide layout-ul cu interfata programului bancar
+                com.bogdan.MainMenu programBanca = new com.bogdan.MainMenu();
+                programBanca.setVisible(true);
 
-        } else {
-            JOptionPane.showMessageDialog(null, "Datele de autentificare sunt gresite!", "Login Error", JOptionPane.ERROR_MESSAGE);
-            jPassword.setText(null);
-            jTxtUtilizator.setText(null);
-        }
-            
+            } else {
+                JOptionPane.showMessageDialog(null, "Datele de autentificare sunt gresite!", "Login Error", JOptionPane.ERROR_MESSAGE);
+                jPassword.setText(null);
+                utilizatorJtxt.setText(null);
+            }
+
         }
     }//GEN-LAST:event_jPasswordKeyPressed
 
@@ -261,19 +260,18 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBtnLogin;
-    private javax.swing.JButton jBtnReset;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel autentificareLabel;
+    private javax.swing.JButton continuajBtnL;
     private javax.swing.JLabel jLabelParola;
-    private javax.swing.JLabel jLabelUtilizator;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPasswordField jPassword;
-    private javax.swing.JTextField jTxtUtilizator;
+    private javax.swing.JLabel pozaAutentificarejLabel;
+    private javax.swing.JButton reseteazajBtn;
+    private javax.swing.JLabel textAutentificarejLabel;
+    private javax.swing.JTextField utilizatorJtxt;
+    private javax.swing.JLabel utilizatorLabel;
     // End of variables declaration//GEN-END:variables
-
 
     //inchide fereastra de login dupa ce datele au fost introduse corect
     public void close() {

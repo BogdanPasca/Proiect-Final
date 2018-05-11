@@ -1,10 +1,11 @@
 package com.bogdan;
+
 import javax.swing.JOptionPane;
 
 public class AddAccountMenu extends javax.swing.JDialog {
 
     private Bank bank;
-    private Customer customer;
+    private Client customer;
 
     /**
      * Creates new form AddAccountMenu
@@ -27,41 +28,41 @@ public class AddAccountMenu extends javax.swing.JDialog {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        firstNameLabel = new javax.swing.JLabel();
-        firstNameField = new javax.swing.JTextField();
-        lastNameLabel = new javax.swing.JLabel();
-        lastNameField = new javax.swing.JTextField();
-        ssnLabel = new javax.swing.JLabel();
+        prenumeLabel = new javax.swing.JLabel();
+        prenumeField = new javax.swing.JTextField();
+        numeLabel = new javax.swing.JLabel();
+        numeField = new javax.swing.JTextField();
+        cnpLabel = new javax.swing.JLabel();
         cnpField = new javax.swing.JTextField();
         depositLabel = new javax.swing.JLabel();
         depositField = new javax.swing.JTextField();
         typeLabel = new javax.swing.JLabel();
         typeField = new javax.swing.JComboBox();
-        okButton = new javax.swing.JButton();
-        cancelButton = new javax.swing.JButton();
+        adaugaButton = new javax.swing.JButton();
+        anulareButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Adaugă cont");
         setMinimumSize(new java.awt.Dimension(350, 300));
         getContentPane().setLayout(new java.awt.GridLayout(6, 2, 5, 5));
 
-        firstNameLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        firstNameLabel.setText("Prenume:");
-        getContentPane().add(firstNameLabel);
+        prenumeLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        prenumeLabel.setText("Prenume:");
+        getContentPane().add(prenumeLabel);
 
-        firstNameField.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        getContentPane().add(firstNameField);
+        prenumeField.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        getContentPane().add(prenumeField);
 
-        lastNameLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        lastNameLabel.setText("Nume:");
-        getContentPane().add(lastNameLabel);
+        numeLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        numeLabel.setText("Nume:");
+        getContentPane().add(numeLabel);
 
-        lastNameField.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        getContentPane().add(lastNameField);
+        numeField.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        getContentPane().add(numeField);
 
-        ssnLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        ssnLabel.setText("Cnp:");
-        getContentPane().add(ssnLabel);
+        cnpLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        cnpLabel.setText("Cnp:");
+        getContentPane().add(cnpLabel);
 
         cnpField.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         cnpField.setMinimumSize(new java.awt.Dimension(50, 90));
@@ -88,70 +89,70 @@ public class AddAccountMenu extends javax.swing.JDialog {
         });
         getContentPane().add(typeField);
 
-        okButton.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        okButton.setText("OK");
-        okButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        okButton.addActionListener(new java.awt.event.ActionListener() {
+        adaugaButton.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        adaugaButton.setText("ADAUGĂ");
+        adaugaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        adaugaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                okButtonActionPerformed(evt);
+                adaugaButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(okButton);
+        getContentPane().add(adaugaButton);
 
-        cancelButton.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        cancelButton.setText("Cancel");
-        cancelButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        cancelButton.addActionListener(new java.awt.event.ActionListener() {
+        anulareButton.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        anulareButton.setText("ANULARE");
+        anulareButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        anulareButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cancelButtonActionPerformed(evt);
+                anulareButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(cancelButton);
+        getContentPane().add(anulareButton);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
+    private void anulareButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_anulareButtonActionPerformed
         this.dispose();
-    }//GEN-LAST:event_cancelButtonActionPerformed
+    }//GEN-LAST:event_anulareButtonActionPerformed
 
-    private void okButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_okButtonActionPerformed
+    private void adaugaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adaugaButtonActionPerformed
         StringBuilder warnings = new StringBuilder();
         String firstName = "", lastName = "", cnp = "", depositString = "";
         double amount = 0;
         //Verify first name field. Am pus return pentru ca sa nu ma lase sa trec mai departe daca nu completez un camp
-        if (firstNameField.getText().isEmpty()) {
+        if (prenumeField.getText().isEmpty()) {
             warnings.append("Câmpul prenume nu poate fi gol.\n");
         } else {
-            firstName = firstNameField.getText();
+            firstName = prenumeField.getText();
         }
         //Daca prenumele este un numar - eroare
-        if (firstNameField.getText().matches("-?\\d+(\\.\\d+)?")) {
+        if (prenumeField.getText().matches("-?\\d+(\\.\\d+)?")) {
             JOptionPane.showMessageDialog(this, "Nu sunt admise numere în câmpul prenume!", "Input Error", JOptionPane.WARNING_MESSAGE);
             return;
         }
 
         //Verificare pentru litere in campul prenume
-        if (!firstNameField.getText().matches("^[a-zA-z0-9]*$")) {
+        if (!prenumeField.getText().matches("^[a-zA-z0-9]*$")) {
             JOptionPane.showMessageDialog(this, "Sunt admise doar litere în câmpul prenume!", "Input Error", JOptionPane.WARNING_MESSAGE);
             return;
         }
 
         //Verificare nume
-        if (lastNameField.getText().isEmpty()) {
+        if (numeField.getText().isEmpty()) {
             warnings.append("Câmpul nume nu poate fi gol.\n");
         } else {
-            lastName = lastNameField.getText();
+            lastName = numeField.getText();
         }
 
         //Daca numele este un numar - eroare
-        if (lastNameField.getText().matches("-?\\d+(\\.\\d+)?")) {
+        if (numeField.getText().matches("-?\\d+(\\.\\d+)?")) {
             JOptionPane.showMessageDialog(this, "Nu sunt admise numere în câmpul nume!", "Input Error", JOptionPane.WARNING_MESSAGE);
             return;
         }
 
         //Verificare pentru litere in campul nume
-        if (!lastNameField.getText().matches("^[a-zA-z0-9]*$")) {
+        if (!numeField.getText().matches("^[a-zA-z0-9]*$")) {
             JOptionPane.showMessageDialog(this, "Sunt admise doar litere în câmpul nume!", "Input Error", JOptionPane.WARNING_MESSAGE);
             return;
         }
@@ -195,13 +196,13 @@ public class AddAccountMenu extends javax.swing.JDialog {
                 }
             }
             if (accountType != AccountType.Undefined) {
-                customer = bank.openAccount(firstName, lastName, cnp, accountType, amount);
+                customer = bank.deschideCont(firstName, lastName, cnp, accountType, amount);
                 this.dispose();
             } else {
                 JOptionPane.showMessageDialog(this, warnings.toString(), "Input Warnings", JOptionPane.WARNING_MESSAGE);
             }
         }
-    }//GEN-LAST:event_okButtonActionPerformed
+    }//GEN-LAST:event_adaugaButtonActionPerformed
 
     private void typeFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_typeFieldActionPerformed
         // TODO add your handling code here:
@@ -209,22 +210,22 @@ public class AddAccountMenu extends javax.swing.JDialog {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton cancelButton;
+    private javax.swing.JButton adaugaButton;
+    private javax.swing.JButton anulareButton;
     private javax.swing.JTextField cnpField;
+    private javax.swing.JLabel cnpLabel;
     private javax.swing.JTextField depositField;
     private javax.swing.JLabel depositLabel;
-    private javax.swing.JTextField firstNameField;
-    private javax.swing.JLabel firstNameLabel;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField lastNameField;
-    private javax.swing.JLabel lastNameLabel;
-    private javax.swing.JButton okButton;
-    private javax.swing.JLabel ssnLabel;
+    private javax.swing.JTextField numeField;
+    private javax.swing.JLabel numeLabel;
+    private javax.swing.JTextField prenumeField;
+    private javax.swing.JLabel prenumeLabel;
     private javax.swing.JComboBox typeField;
     private javax.swing.JLabel typeLabel;
     // End of variables declaration//GEN-END:variables
 
-    Customer getCustomer() {
+    Client getCustomer() {
         return customer;
     }
 }

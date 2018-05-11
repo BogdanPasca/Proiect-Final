@@ -1,8 +1,8 @@
 package com.bogdan;
 
-class InsufficientFundsException extends Exception {
+class FonduriInsuficienteException extends Exception {
 
-    public InsufficientFundsException() {
+    public FonduriInsuficienteException() {
         super("Nu aveți suficiente fonduri pentru a putea finaliza tranzacția.");
     }
 }
