@@ -120,7 +120,7 @@ public class AddAccountMenu extends javax.swing.JDialog {
         StringBuilder warnings = new StringBuilder();
         String firstName = "", lastName = "", cnp = "", depositString = "";
         double amount = 0;
-        //Verify first name field. Am pus return pentru ca sa nu ma lase sa trec mai departe daca nu completez un camp
+        //Verificare prenume. Am pus return pentru ca sa nu ma lase sa trec mai departe daca nu completez un camp
         if (prenumeField.getText().isEmpty()) {
             warnings.append("Câmpul prenume nu poate fi gol.\n");
         } else {
@@ -132,8 +132,8 @@ public class AddAccountMenu extends javax.swing.JDialog {
             return;
         }
 
-        //Verificare pentru litere in campul prenume
-        if (!prenumeField.getText().matches("^[a-zA-z0-9]*$")) {
+        //Verificare pentru numere in campul prenume
+        if (!prenumeField.getText().matches("^[a-zA-z]*$")) {
             JOptionPane.showMessageDialog(this, "Sunt admise doar litere în câmpul prenume!", "Input Error", JOptionPane.WARNING_MESSAGE);
             return;
         }
@@ -151,8 +151,8 @@ public class AddAccountMenu extends javax.swing.JDialog {
             return;
         }
 
-        //Verificare pentru litere in campul nume
-        if (!numeField.getText().matches("^[a-zA-z0-9]*$")) {
+        //Verificare pentru numere in campul nume
+        if (!numeField.getText().matches("^[a-zA-z]*$")) {
             JOptionPane.showMessageDialog(this, "Sunt admise doar litere în câmpul nume!", "Input Error", JOptionPane.WARNING_MESSAGE);
             return;
         }

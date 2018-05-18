@@ -4,6 +4,10 @@ public class AccountDetailsPage extends javax.swing.JDialog {
 
     /**
      * Creates new form AccountDetailsPage
+     * @param parent
+     * @param modal
+     * @param bank
+     * @param customer
      */
     public AccountDetailsPage(java.awt.Frame parent, boolean modal, Bank bank, Client customer) {
         super(parent, modal);
