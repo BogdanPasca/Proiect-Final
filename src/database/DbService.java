@@ -1,5 +1,10 @@
-package com.bogdan;
+package database;
 
+import entities.account.type.Checking;
+import entities.account.type.Savings;
+import entities.Client;
+import entities.account.Account;
+import entities.account.AccountType;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -25,7 +30,7 @@ public class DbService {
     }
 
     //Create (Add Account)
-    int addAccount(String prenume, String nume, String cnp, AccountType tip, Double sold) {
+    public int addAccount(String prenume, String nume, String cnp, AccountType tip, Double sold) {
         int userId = -1;
         int accountId = -1;
         Connection connection = connect();
@@ -72,7 +77,7 @@ public class DbService {
     }
 
     //Read (Get Details)
-    Client getAccount(int accountId) {
+    public Client getAccount(int accountId) {
         Client customer = null;
         Connection connection = connect();
         try {
@@ -105,7 +110,7 @@ public class DbService {
     }
 
     //Update (Edit Account)
-    boolean updateAccount(int accountId, Double newBalance) {
+   public boolean updateAccount(int accountId, Double newBalance) {
         boolean success = false;
         Connection connection = connect();
         try {
@@ -123,7 +128,7 @@ public class DbService {
     }
 
     //Delete (Remove Account)
-    boolean deleteAccount(int accountId) {
+   public boolean deleteAccount(int accountId) {
         boolean success = false;
         Connection connection = connect();
         try {
@@ -142,7 +147,7 @@ public class DbService {
         return success;
     }
 
-    ArrayList<Client> getAllAccounts() {
+    public ArrayList<Client> getAllAccounts() {
         ArrayList<Client> customers = new ArrayList<Client>();
         Connection connection = connect();
         try {

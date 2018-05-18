@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.bogdan;
+package login;
 
 import javax.swing.JOptionPane;
 import java.awt.Toolkit;
@@ -51,7 +51,7 @@ public class Login extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(0, 102, 204));
 
-        pozaAutentificarejLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/bogdan/login2.png"))); // NOI18N
+        pozaAutentificarejLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/login2.png")));
 
         textAutentificarejLabel.setBackground(new java.awt.Color(255, 255, 255));
         textAutentificarejLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -71,7 +71,7 @@ public class Login extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(50, 50, 50)
                         .addComponent(textAutentificarejLabel)))
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(68, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -192,7 +192,7 @@ public class Login extends javax.swing.JFrame {
             jPassword.setText(null);
             close();
 
-            com.bogdan.MainMenu programBanca = new com.bogdan.MainMenu();
+            menus.MainMenu programBanca = new menus.MainMenu();
             programBanca.setVisible(true);
 
         } else {
@@ -212,7 +212,7 @@ public class Login extends javax.swing.JFrame {
                 //O metoda care inchide fereastra de login dupa ce datele au fost introduse corect.
                 close();
                 //deschide layout-ul cu interfata programului bancar
-                com.bogdan.MainMenu programBanca = new com.bogdan.MainMenu();
+                menus.MainMenu programBanca = new menus.MainMenu();
                 programBanca.setVisible(true);
 
             } else {

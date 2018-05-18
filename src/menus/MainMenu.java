@@ -1,5 +1,10 @@
-package com.bogdan;
+package menus;
 
+import menus.MeniuRetragereBani;
+import entities.Client;
+import entities.Bank;
+import entities.account.AddAccountMenu;
+import entities.account.AccountDetailsPage;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -179,9 +184,8 @@ public class MainMenu extends javax.swing.JFrame {
         fileMenu.setText("File");
         fileMenu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         fileMenu.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        fileMenu.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/com/bogdan/save-icon-5422.png"))); // NOI18N
 
-        exitMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/bogdan/delete.png"))); // NOI18N
+        exitMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/delete.png")));
         exitMenuItem.setText("Ieșire");
         exitMenuItem.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         exitMenuItem.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));

@@ -1,4 +1,4 @@
-package com.bogdan;
+package entities.account;
 
 public enum AccountType {
     Depozit,

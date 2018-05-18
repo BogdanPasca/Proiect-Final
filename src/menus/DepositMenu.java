@@ -1,5 +1,8 @@
-package com.bogdan;
+package menus;
 
+import exceptions.InvalidAmountException;
+import entities.Client;
+import entities.Bank;
 import javax.swing.JOptionPane;
 
 public class DepositMenu extends javax.swing.JDialog {

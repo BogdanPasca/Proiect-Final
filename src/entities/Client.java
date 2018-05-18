@@ -1,4 +1,9 @@
-package com.bogdan;
+package entities;
+
+import entities.account.Account;
+import entities.account.AccountType;
+import entities.account.AccountType;
+import entities.account.AddAccountMenu;
 
 public class Client {
 
@@ -7,7 +12,7 @@ public class Client {
     private final String cnp;
     private final Account cont;
 
-    Client(String prenume, String nume, String cnp, Account account) {
+    public Client(String prenume, String nume, String cnp, Account account) {  //aici am modificat public
         this.prenume = prenume;
         this.nume = nume;
         this.cnp = cnp;
@@ -27,11 +32,11 @@ public class Client {
         return " Account Number: " + cont.getNumarCont() + " - Nume: " + getPrenume() + " " + getNume();
     }
 
-    Account getCont() {
+    public Account getCont() {
         return cont;
     }
 
-    public String getPrenume() {
+    public String getPrenume() {  //aici am pus public
         return prenume;
     }
 

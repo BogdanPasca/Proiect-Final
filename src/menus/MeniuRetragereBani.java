@@ -1,5 +1,8 @@
-package com.bogdan;
+package menus;
 
+import exceptions.FonduriInsuficienteException;
+import entities.Client;
+import entities.Bank;
 import javax.swing.JOptionPane;
 
 public class MeniuRetragereBani extends javax.swing.JDialog {

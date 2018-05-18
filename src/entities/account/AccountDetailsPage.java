@@ -1,4 +1,7 @@
-package com.bogdan;
+package entities.account;
+
+import entities.Bank;
+import entities.Client;
 
 public class AccountDetailsPage extends javax.swing.JDialog {
 

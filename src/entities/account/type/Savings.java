@@ -1,8 +1,11 @@
-package com.bogdan;
+package entities.account.type;
+
+import entities.account.Account;
+import entities.account.AccountType;
 
 public class Savings extends Account {
 
-    Savings(int accountNumber, double initialDeposit) {
+    public Savings(int accountNumber, double initialDeposit) {
         super(accountNumber);
         this.setSold(initialDeposit);
     }

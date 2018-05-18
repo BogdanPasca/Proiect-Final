@@ -1,11 +1,13 @@
-package com.bogdan;
+package entities.account;
+
+
 
 public abstract class Account {
 
     private double sold = 0;
     private int numarCont;
 
-    Account(int numarCont) {
+     public Account(int numarCont) {
         this.numarCont = numarCont;
     }
 

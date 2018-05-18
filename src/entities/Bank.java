@@ -1,6 +1,10 @@
-package com.bogdan;
+package entities;
 
 
+import database.DbService;
+import exceptions.FonduriInsuficienteException;
+import exceptions.InvalidAmountException;
+import entities.account.AccountType;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.ArrayList;
@@ -9,25 +13,25 @@ public class Bank{
 
     private DbService database = new DbService();
 
-    Client deschideCont(String prenume, String nume, String cnp, AccountType type, Double sold) {
+     public Client deschideCont(String prenume, String nume, String cnp, AccountType type, Double sold) {
         int accountId = database.addAccount(prenume, nume, cnp, type, sold);
         Client client = database.getAccount(accountId);
         return client;
     }
 
-    boolean stergeCont(int accountId) {
+    public boolean stergeCont(int accountId) {
         return database.deleteAccount(accountId);
     }
 
-    Client getClient(int accountId) {
+    public Client getClient(int accountId) {
         return database.getAccount(accountId);
     }
 
-    ArrayList<Client> getClienti() {
+    public ArrayList<Client> getClienti() {
         return database.getAllAccounts();
     }
 
-    void retrageBani(int accountId, double suma) throws FonduriInsuficienteException {
+    public void retrageBani(int accountId, double suma) throws FonduriInsuficienteException {
         Client client = getClient(accountId);
         double comisionTranzactie = getComision(client.getCont().getAccountType());
         if (suma + comisionTranzactie > client.getCont().getSold()) {
@@ -37,7 +41,7 @@ public class Bank{
         database.updateAccount(accountId, noulSold);
     }
 
-    void adaugaBani(int accountId, double suma) throws InvalidAmountException {
+    public void adaugaBani(int accountId, double suma) throws InvalidAmountException {
         Client client = getClient(accountId);
         if (suma <= 0) {
             throw new InvalidAmountException();
@@ -66,7 +70,7 @@ public class Bank{
         return bd.doubleValue();
     }
 
-    double getComision(AccountType accountType) {
+    public double getComision(AccountType accountType) {
         double comision = 0;
         switch (accountType) {
             case Depozit:

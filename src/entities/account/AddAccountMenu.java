@@ -1,5 +1,8 @@
-package com.bogdan;
+package entities.account;
 
+import entities.Bank;
+import entities.Client;
+import entities.account.AccountType;
 import javax.swing.JOptionPane;
 
 public class AddAccountMenu extends javax.swing.JDialog {
@@ -225,7 +228,7 @@ public class AddAccountMenu extends javax.swing.JDialog {
     private javax.swing.JLabel typeLabel;
     // End of variables declaration//GEN-END:variables
 
-    Client getCustomer() {
+    public Client getCustomer() {
         return customer;
     }
 }
