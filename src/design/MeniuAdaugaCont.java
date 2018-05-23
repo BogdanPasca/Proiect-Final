@@ -1,11 +1,12 @@
-package entities.account;
+package design;
 
 import entities.Bank;
 import entities.Client;
 import entities.account.AccountType;
+import entities.account.AccountType;
 import javax.swing.JOptionPane;
 
-public class AddAccountMenu extends javax.swing.JDialog {
+public class MeniuAdaugaCont extends javax.swing.JDialog {
 
     private Bank bank;
     private Client customer;
@@ -13,7 +14,7 @@ public class AddAccountMenu extends javax.swing.JDialog {
     /**
      * Creates new form AddAccountMenu
      */
-    public AddAccountMenu(java.awt.Frame parent, boolean modal, Bank bank) {
+    public MeniuAdaugaCont(java.awt.Frame parent, boolean modal, Bank bank) {
         super(parent, modal);
         initComponents();
         setLocationRelativeTo(parent);

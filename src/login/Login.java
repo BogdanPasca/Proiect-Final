@@ -192,7 +192,7 @@ public class Login extends javax.swing.JFrame {
             jPassword.setText(null);
             close();
 
-            menus.MainMenu programBanca = new menus.MainMenu();
+            design.MeniuPrincipal programBanca = new design.MeniuPrincipal();
             programBanca.setVisible(true);
 
         } else {
@@ -212,7 +212,7 @@ public class Login extends javax.swing.JFrame {
                 //O metoda care inchide fereastra de login dupa ce datele au fost introduse corect.
                 close();
                 //deschide layout-ul cu interfata programului bancar
-                menus.MainMenu programBanca = new menus.MainMenu();
+                design.MeniuPrincipal programBanca = new design.MeniuPrincipal();
                 programBanca.setVisible(true);
 
             } else {

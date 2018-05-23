@@ -1,4 +1,4 @@
-package menus;
+package design;
 
 import exceptions.FonduriInsuficienteException;
 import entities.Client;

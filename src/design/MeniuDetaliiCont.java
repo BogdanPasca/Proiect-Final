@@ -1,9 +1,9 @@
-package entities.account;
+package design;
 
 import entities.Bank;
 import entities.Client;
 
-public class AccountDetailsPage extends javax.swing.JDialog {
+public class MeniuDetaliiCont extends javax.swing.JDialog {
 
     /**
      * Creates new form AccountDetailsPage
@@ -12,7 +12,7 @@ public class AccountDetailsPage extends javax.swing.JDialog {
      * @param bank
      * @param customer
      */
-    public AccountDetailsPage(java.awt.Frame parent, boolean modal, Bank bank, Client customer) {
+    public MeniuDetaliiCont(java.awt.Frame parent, boolean modal, Bank bank, Client customer) {
         super(parent, modal);
         initComponents();
         setLocationRelativeTo(parent);
@@ -62,41 +62,57 @@ public class AccountDetailsPage extends javax.swing.JDialog {
         prenumeLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         prenumeLabel.setText("Prenume:");
         getContentPane().add(prenumeLabel);
+
+        prenumeField.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         getContentPane().add(prenumeField);
 
         numeLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         numeLabel.setText("Nume:");
         getContentPane().add(numeLabel);
+
+        numeField.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         getContentPane().add(numeField);
 
         cnpLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         cnpLabel.setText("Cnp:");
         getContentPane().add(cnpLabel);
+
+        cnpField.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         getContentPane().add(cnpField);
 
         tipContLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         tipContLabel.setText("Tipul contului:");
         getContentPane().add(tipContLabel);
+
+        tipContField.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         getContentPane().add(tipContField);
 
         numarContLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         numarContLabel.setText("Numărul contului:");
         getContentPane().add(numarContLabel);
+
+        numarContField.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         getContentPane().add(numarContField);
 
         soldLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         soldLabel.setText("Sold:");
         getContentPane().add(soldLabel);
+
+        soldField.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         getContentPane().add(soldField);
 
         rataDobanziiLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         rataDobanziiLabel.setText("Rata dobânzii:");
         getContentPane().add(rataDobanziiLabel);
+
+        rataDobanziiField.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         getContentPane().add(rataDobanziiField);
 
         comisionLabel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         comisionLabel.setText("Comision tranzacție:");
         getContentPane().add(comisionLabel);
+
+        comisionField.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         getContentPane().add(comisionField);
 
         okButton.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N

@@ -37,6 +37,11 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="prenumeField">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Calibri" size="18" style="0"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="numeLabel">
       <Properties>
@@ -47,6 +52,11 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="numeField">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Calibri" size="18" style="0"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="cnpLabel">
       <Properties>
@@ -57,6 +67,11 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="cnpField">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Calibri" size="18" style="0"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="tipContLabel">
       <Properties>
@@ -67,6 +82,11 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="tipContField">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Calibri" size="18" style="0"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="numarContLabel">
       <Properties>
@@ -77,6 +97,11 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="numarContField">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Calibri" size="18" style="0"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="soldLabel">
       <Properties>
@@ -87,6 +112,11 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="soldField">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Calibri" size="18" style="0"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="rataDobanziiLabel">
       <Properties>
@@ -97,6 +127,11 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="rataDobanziiField">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Calibri" size="18" style="0"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="comisionLabel">
       <Properties>
@@ -107,6 +142,11 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="comisionField">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Calibri" size="18" style="0"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="okButton">
       <Properties>

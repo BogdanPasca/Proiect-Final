@@ -1,20 +1,20 @@
-package menus;
+package design;
 
-import menus.MeniuRetragereBani;
+import design.MeniuAdaugareBani;
 import entities.Client;
 import entities.Bank;
-import entities.account.AddAccountMenu;
-import entities.account.AccountDetailsPage;
+import design.MeniuAdaugaCont;
+import design.MeniuDetaliiCont;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-public class MainMenu extends javax.swing.JFrame {
+public class MeniuPrincipal extends javax.swing.JFrame {
 
     private Bank bank;
     private String saveLocation = null;
     private final DefaultTableModel model;
 
-    public MainMenu() {
+    public MeniuPrincipal() {
         initComponents();
         setLocationRelativeTo(null);
         bank = new Bank();
@@ -231,7 +231,7 @@ public class MainMenu extends javax.swing.JFrame {
             int selectedRow = accountTable.getSelectedRow();
             Client customer = getSelectedCustomer(selectedRow);
             if (customer != null) {
-                AccountDetailsPage page = new AccountDetailsPage(this, true, bank, customer);
+                MeniuDetaliiCont page = new MeniuDetaliiCont(this, true, bank, customer);
                 page.setVisible(true);
             }
         }
@@ -260,7 +260,7 @@ public class MainMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_stergeContButtonActionPerformed
 
     private void adaugaContButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adaugaContButtonActionPerformed
-        AddAccountMenu menu = new AddAccountMenu(this, true, bank);
+        MeniuAdaugaCont menu = new MeniuAdaugaCont(this, true, bank);
         menu.setVisible(true);
         if (menu.getCustomer() != null) {
             addCustomerToTable(menu.getCustomer());
@@ -273,7 +273,7 @@ public class MainMenu extends javax.swing.JFrame {
         if (client != null) {
             javax.swing.JDialog window = null;
             if (action.equals("deposit")) {
-                window = new DepositMenu(this, true, bank, client);
+                window = new MeniuAdaugareBani(this, true, bank, client);
             } else if (action.equals("withdraw")) {
                 window = new MeniuRetragereBani(this, true, bank, client);
             }
@@ -343,14 +343,15 @@ public class MainMenu extends javax.swing.JFrame {
                 }
             }
         } catch (Exception ex) {
-            java.util.logging.Logger.getLogger(MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MeniuPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MainMenu().setVisible(true);
+                new MeniuPrincipal().setVisible(true);
             }
         });
     }

@@ -3,9 +3,9 @@ package entities.account.type;
 import entities.account.Account;
 import entities.account.AccountType;
 
-public class Savings extends Account {
+public class Economii extends Account {
 
-    public Savings(int accountNumber, double initialDeposit) {
+    public Economii(int accountNumber, double initialDeposit) {
         super(accountNumber);
         this.setSold(initialDeposit);
     }

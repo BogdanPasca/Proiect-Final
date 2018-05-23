@@ -3,7 +3,7 @@ package entities;
 import entities.account.Account;
 import entities.account.AccountType;
 import entities.account.AccountType;
-import entities.account.AddAccountMenu;
+import design.MeniuAdaugaCont;
 
 public class Client {
 

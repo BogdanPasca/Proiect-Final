@@ -1,7 +1,7 @@
 package database;
 
-import entities.account.type.Checking;
-import entities.account.type.Savings;
+import entities.account.type.Depozit;
+import entities.account.type.Economii;
 import entities.Client;
 import entities.account.Account;
 import entities.account.AccountType;
@@ -96,9 +96,9 @@ public class DbService {
                     Double sold = findUserResults.getDouble("Sold");
                     Account account;
                     if (accountType.equals(AccountType.Depozit.name())) {
-                        account = new Checking(accountId, sold);
+                        account = new Depozit(accountId, sold);
                     } else {
-                        account = new Savings(accountId, sold);
+                        account = new Economii(accountId, sold);
                     }
                     customer = new Client(prenume, nume, cnp, account);
                 }
@@ -165,9 +165,9 @@ public class DbService {
                     int accountId = findUserResults.getInt("AccountId");
                     Account account;
                     if (accountType.equals(AccountType.Depozit.name())) {
-                        account = new Checking(accountId, sold);
+                        account = new Depozit(accountId, sold);
                     } else {
-                        account = new Savings(accountId, sold);
+                        account = new Economii(accountId, sold);
                     }
                     Client customer = new Client(prenume, nume, cnp, account);
                     customers.add(customer);

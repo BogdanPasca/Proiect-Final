@@ -1,16 +1,16 @@
-package menus;
+package design;
 
 import exceptions.InvalidAmountException;
 import entities.Client;
 import entities.Bank;
 import javax.swing.JOptionPane;
 
-public class DepositMenu extends javax.swing.JDialog {
+public class MeniuAdaugareBani extends javax.swing.JDialog {
 
     private Client customer;
     private Bank bank;
 
-    public DepositMenu(java.awt.Frame parent, boolean modal, Bank banca, Client client) {
+    public MeniuAdaugareBani(java.awt.Frame parent, boolean modal, Bank banca, Client client) {
         super(parent, modal);
         initComponents();
         setLocationRelativeTo(parent);
